@@ -13,4 +13,21 @@ export default defineNuxtConfig({
     preference: "system",
     fallback: "dark",
   },
+  i18n: {
+    strategy: "prefix",
+    vueI18n: "./i18n/i18n.config.ts",
+    defaultLocale: "en",
+    locales: [
+      {
+        code: "en",
+        language: "en-US",
+        file: "en.json",
+      },
+      {
+        code: "th",
+        language: "th-TH",
+        file: "th.json",
+      },
+    ],
+  },
 });
