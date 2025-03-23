@@ -7,6 +7,6 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css"],
     app: {
         baseURL: "/portfolio-chanawat/",
-        buildAssetsDir: "/portfolio-chanawat/_nuxt/",
+        cdnURL: "/portfolio-chanawat/",
     },
 });
