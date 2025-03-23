@@ -7,10 +7,6 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.css"],
     app: {
         baseURL: "/portfolio-chanawat/",
-    },
-    nitro: {
-        output: {
-            publicDir: "./dist",
-        },
+        buildAssetsDir: "/portfolio-chanawat/_nuxt/",
     },
 });
