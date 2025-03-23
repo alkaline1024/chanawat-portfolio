@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: ["@nuxtjs/i18n", "@nuxt/icon", "@nuxt/ui"],
     app: {
-        baseURL: "portfolio-chanawat",
+        baseURL: "/portfolio-chanawat",
     },
     ssr: false,
     css: ["~/assets/css/main.css"],
