@@ -6,8 +6,8 @@ export default defineNuxtConfig({
   // ssr: false,
   css: ["~/assets/css/main.css"],
   app: {
-    baseURL: "/",
-    cdnURL: "/",
+    baseURL: "/chanawat-portfolio",
+    cdnURL: "/chanawat-portfolio",
   },
   colorMode: {
     preference: "system",
