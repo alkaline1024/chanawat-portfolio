@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+.header-menu {
+    @apply flex flex-1 gap-2 justify-center items-center cursor-pointer transition-all border-b-2 border-gray-100 text-gray-500 hover:text-black;
+}
+
+.header-menu-active {
+    @apply border-black text-black;
+}
