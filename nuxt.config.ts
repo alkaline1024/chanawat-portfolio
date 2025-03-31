@@ -9,10 +9,11 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxtjs/i18n", "@nuxt/icon", "@nuxt/ui", "@nuxt/fonts"],
   css: ["~/assets/css/main.css"],
-  // ssr: false,
+  ssr: false,
   app: {
     baseURL: "/chanawat-portfolio",
     cdnURL: "/chanawat-portfolio",
+    
   },
   colorMode: {
     preference: "system",
