@@ -15,27 +15,27 @@ onMounted(async () => {
   await wait(1500);
   bounced.value = false;
   zoomed.value = true;
-  await wait(1200);
+  await wait(600);
   zoomed.value = false;
 });
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2 pt-[96px]">
     <AnimationCelebration
       v-if="celebrating"
       @on-completed="celebrating = false"
     />
     <div class="space-y-4">
       <button
-        class="w-fit cursor-pointer text-3xl font-bold text-yellow-500 transition-all hover:scale-150"
-        :class="{ 'animate-bounce': bounced, 'scale-125 duration-800': zoomed }"
+        class="w-fit cursor-pointer rounded-lg border-2 border-yellow-500 bg-yellow-300/5 px-4 py-1 text-xl font-semibold text-yellow-500 transition-all hover:scale-115 hover:bg-yellow-400/10"
+        :class="{ 'animate-bounce': bounced, 'scale-115 duration-400': zoomed }"
         @click="celebrating = true"
       >
         Hello Everyone
         <span class="animate-wave-infinite"> 👋 </span>
       </button>
-      <h1 class="!text-6xl font-semibold">I'm Chanawat Thuasuphap</h1>
+      <h1 class="!text-6xl font-semibold py-6">I'm Chanawat Thuasuphap</h1>
       <h3>
         A passionate Full Stack Developer 🚀 with hands-on experience in building Web and Mobile applications using
         JavaScript, Nuxt, Svelte, FastAPI, Fastify, Flask, and Flutter — focused on building clean and easy-to-use
