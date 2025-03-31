@@ -13,7 +13,6 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/chanawat-portfolio",
     cdnURL: "/chanawat-portfolio",
-    
   },
   colorMode: {
     preference: "system",
@@ -36,6 +35,7 @@ export default defineNuxtConfig({
       },
     ],
   },
+  
   // fonts: {
   //   families: {
   //      sans: {
