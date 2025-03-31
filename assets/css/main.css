@@ -1,5 +1,27 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "./animation.css";
+
+body {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
 
 .text-primary {
   @apply text-black dark:text-white;
@@ -9,8 +31,12 @@
   @apply bg-white dark:bg-stone-900;
 }
 
+.bg-secondary {
+  @apply bg-green-500 dark:bg-green-500;
+}
+
 .border-primary {
-  @apply border-white dark:border-stone-900;
+  @apply border-stone-900 dark:border-white;
 }
 
 .shadow-primary {
