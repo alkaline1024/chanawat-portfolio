@@ -32,12 +32,12 @@ onMounted(async () => {
         :class="{
           'animate-bounce': bounced,
           'scale-115 duration-400': zoomed,
-          'scale-115 !bg-yellow-500 !text-white': celebrating,
+          '!scale-120 !bg-yellow-500 !text-white': celebrating,
         }"
         @click="celebrating = true"
       >
         Hello Everyone
-        <div class="animate-wave-infinite drop-shadow-xl dark:drop-shadow-[0_9px_7px_rgba(255,255,255,0.15)]">👋</div>
+        <div class="animate-wave-infinite drop-shadow-xl dark:drop-shadow-[0_9px_7px_rgba(0,0,0,0.25)]">👋</div>
       </button>
       <h1 class="py-2 !text-6xl font-semibold">I'm Chanawat Thuasuphap</h1>
       <h3>
