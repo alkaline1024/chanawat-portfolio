@@ -24,7 +24,11 @@ h4 {
 }
 
 .text-primary {
-  @apply text-black dark:text-white;
+  @apply text-stone-900 dark:text-white;
+}
+
+.text-secondary {
+  @apply text-white dark:text-black;
 }
 
 .bg-primary {
@@ -32,7 +36,7 @@ h4 {
 }
 
 .bg-secondary {
-  @apply bg-green-500 dark:bg-green-500;
+  @apply bg-green-500 dark:bg-green-400;
 }
 
 .border-primary {

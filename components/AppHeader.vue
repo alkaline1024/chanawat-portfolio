@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
       <a
         class="z-10 flex cursor-pointer items-center justify-center gap-2 px-4 text-lg"
         :href="`#${tab.target}`"
-        :class="isActive(tab.target) ? 'bg-secondary rounded-full p-1 text-white' : 'hover:bg-primary/25 text-primary'"
+        :class="isActive(tab.target) ? 'bg-secondary text-secondary rounded-full p-1 text-white' : 'hover:bg-primary/25 text-primary'"
       >
         <UIcon
           class="text-2xl"
