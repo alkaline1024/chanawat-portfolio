@@ -1,7 +1,8 @@
 {
-    "home": "Home",
-    "projects": "Projects",
-    "resume": "Resume",
-    "blog": "Blog",
-    "contact": "Contact"
-  }
+  "home": "Home",
+  "skills": "Skills",
+  "projects": "Projects",
+  "resume": "Resume",
+  "blog": "Blog",
+  "contact": "Contact"
+}

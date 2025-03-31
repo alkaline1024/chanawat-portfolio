@@ -1,6 +1,6 @@
 <template>
-  <div class="space-y-2">
-    <h1>Reach Out to me!</h1>
+  <div class="space-y-2 pb-32">
+    <h1 class="font-medium">Contact Me</h1>
     <p class="opacity-70">Discuss a project or just want to say hi? My Inbox is open for all.</p>
     <p class="py-2">"I'm actively seeking new challenges and opportunities in full-stack development. Let's build something innovative together!"</p>
     <div>
