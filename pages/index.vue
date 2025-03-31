@@ -1,3 +1,6 @@
 <template>
-  <button class="border">Button</button>
+  <UContainer>
+    <LazySectionHome id="home" />
+    <LazySectionContact id="contact" />
+  </UContainer>
 </template>
