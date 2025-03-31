@@ -22,7 +22,7 @@ const props = defineProps<{
       }"
     >
       <div
-        class="group flex w-16 max-w-16 cursor-pointer flex-col items-center justify-center gap-4 text-center text-gray-500 saturate-100 transition-all hover:text-black hover:drop-shadow-[0_28px_28px_rgba(0,0,0,0.25)] hover:saturate-200 dark:text-gray-400 dark:hover:text-white dark:hover:drop-shadow-[0_28px_28px_rgba(255,255,255,0.5)]"
+        class="group flex w-16 max-w-16 cursor-pointer flex-col items-center justify-center gap-4 text-center text-gray-500 saturate-100 transition-all hover:text-black hover:drop-shadow-[0_28px_28px_rgba(0,0,0,0.25)] hover:saturate-200 dark:text-gray-300 dark:hover:text-white dark:hover:drop-shadow-[0_28px_28px_rgba(255,255,255,0.5)]"
       >
         <UIcon
           :name="skill.icon"
