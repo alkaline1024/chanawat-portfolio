@@ -29,11 +29,15 @@ onMounted(async () => {
     <div class="space-y-12">
       <button
         class="w-fit cursor-pointer rounded-md border-2 border-yellow-500 bg-yellow-300/5 px-4 py-1 text-xl font-medium text-yellow-500 transition-all hover:scale-115 hover:bg-yellow-400/10"
-        :class="{ 'animate-bounce': bounced, 'scale-115 duration-400': zoomed }"
+        :class="{
+          'animate-bounce': bounced,
+          'scale-115 duration-400': zoomed,
+          'scale-115 !bg-yellow-500 !text-white': celebrating,
+        }"
         @click="celebrating = true"
       >
         Hello Everyone
-        <span class="animate-wave-infinite"> 👋 </span>
+        <div class="animate-wave-infinite drop-shadow-xl">👋</div>
       </button>
       <h1 class="py-2 !text-6xl font-semibold">I'm Chanawat Thuasuphap</h1>
       <h3>
@@ -42,11 +46,16 @@ onMounted(async () => {
         applications with modern tools and frameworks.
       </h3>
       <div class="flex items-center gap-8">
-        <UButton label="CONTACT ME" />
+        <UButton
+          label="Contact Me"
+          href="#contact"
+        />
         <UButton
           icon="ic:baseline-download"
           :ui="{ leadingIcon: 'text-2xl' }"
-          label="MY RESUME"
+          label="My Resume"
+          disabled
+          class="hover:!bg-primary-700 !bg-primary-700 opacity-90"
         />
       </div>
     </div>
