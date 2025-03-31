@@ -1,10 +1,15 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/i18n", "@nuxt/icon", "@nuxt/ui", "@formkit/auto-animate"],
-  // ssr: false,
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  modules: ["@nuxtjs/i18n", "@nuxt/icon", "@nuxt/ui", "@nuxt/fonts"],
   css: ["~/assets/css/main.css"],
+  // ssr: false,
   app: {
     baseURL: "/",
     cdnURL: "/",
@@ -30,4 +35,14 @@ export default defineNuxtConfig({
       },
     ],
   },
+  // fonts: {
+  //   families: {
+  //      sans: {
+  //       name: "Noto Sans Thai",
+  //       provider: "google", // โหลดจาก Google Fonts
+  //     },
+  //   },
+  //   display: "swap",
+  //   preconnect: true,
+  // },
 });
