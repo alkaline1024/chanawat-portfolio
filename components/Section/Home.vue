@@ -1,16 +1,40 @@
 <script setup lang="ts">
-import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+import { type DotLottie, DotLottieVue } from "@lottiefiles/dotlottie-vue";
+
+const wait = async (milliseconds: number) => {
+  return await new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
+
+const celebrating = ref(false);
+const bounced = ref(false);
+const zoomed = ref(false);
+
+onMounted(async () => {
+  // Hello's animation
+  bounced.value = true;
+  await wait(1500);
+  bounced.value = false;
+  zoomed.value = true;
+  await wait(1200);
+  zoomed.value = false;
+});
 </script>
 
 <template>
   <div class="flex items-center gap-2">
+    <AnimationCelebration
+      v-if="celebrating"
+      @on-completed="celebrating = false"
+    />
     <div class="space-y-4">
-      <div class="group w-full font-bold text-yellow-500">
-        <div class="w-fit cursor-default text-3xl transition-all group-hover:scale-150">
-          Hello Everyone
-          <span class="animate-wave-infinite"> 👋 </span>
-        </div>
-      </div>
+      <button
+        class="w-fit cursor-pointer text-3xl font-bold text-yellow-500 transition-all hover:scale-150"
+        :class="{ 'animate-bounce': bounced, 'scale-125 duration-800': zoomed }"
+        @click="celebrating = true"
+      >
+        Hello Everyone
+        <span class="animate-wave-infinite"> 👋 </span>
+      </button>
       <h1 class="!text-6xl font-semibold">I'm Chanawat Thuasuphap</h1>
       <h3>
         A passionate Full Stack Developer 🚀 with hands-on experience in building Web and Mobile applications using
