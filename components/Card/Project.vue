@@ -9,7 +9,7 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
 <template>
   <div class="bg-primary shadow-primary relative overflow-hidden rounded-xl shadow-lg transition-all hover:shadow-xl">
     <img
-      :src="`/img/logo-${project.for}.png`"
+      :src="`/chanawat-portfolio/img/logo-${project.for}.png`"
       class="absolute top-4 right-4 z-10 w-14 rounded-full shadow-lg"
     />
     <div class="light:bg-gradient-to-br relative w-full from-stone-200 to-stone-50 p-12 text-xl dark:bg-stone-700">
