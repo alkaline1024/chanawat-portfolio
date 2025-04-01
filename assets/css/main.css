@@ -2,6 +2,10 @@
 @import "@nuxt/ui";
 @import "./animation.css";
 
+:root {
+  --ui-container: 1600px;
+}
+
 html {
   scroll-behavior: smooth;
 }
