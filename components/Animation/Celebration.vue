@@ -28,7 +28,7 @@ const celebrationSrc = animationSources[Math.floor(Math.random() * animationSour
     :loop="false"
     :speed="1.5"
     autoplay
-    class="fixed top-0 right-0 left-0 h-screen w-screen"
+    class="fixed top-0 right-0 left-0 z-10 h-screen w-screen"
     ref="dotLottieRef"
   />
 </template>

@@ -295,22 +295,22 @@ const mySkill = {
       </div>
     </div>
     <div class="overflow-hidden rounded-lg shadow-xl">
-      <h3 class="w-full bg-green-500/15 dark:bg-green-800/65  p-3 shadow">Advance</h3>
-      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 dark:bg-green-200/6 px-4 py-5">
+      <h4 class="bg-primary-300 dark:bg-primary-700 w-full p-2 px-4 font-medium shadow">Advance</h4>
+      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 px-4 py-8 dark:bg-green-200/6">
         <SkillCard
           v-for="skill in mySkill.advance"
           :skill
         />
       </div>
-      <h3 class="w-full bg-green-500/15  dark:bg-green-800/65 p-3 shadow">Intermediate</h3>
-      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 dark:bg-green-200/6 px-4 py-5">
+      <h4 class="bg-primary-300 dark:bg-primary-700 w-full p-2 px-4 font-medium shadow">Intermediate</h4>
+      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 px-4 py-8 dark:bg-green-200/6">
         <SkillCard
           v-for="skill in mySkill.intermediate"
           :skill
         />
       </div>
-      <h3 class="w-full bg-green-500/15  dark:bg-green-800/65 p-3 shadow">Basic</h3>
-      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 dark:bg-green-200/6 px-4 py-5">
+      <h4 class="bg-primary-300 dark:bg-primary-700 w-full p-2 px-4 font-medium shadow">Basic</h4>
+      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 px-4 py-8 dark:bg-green-200/6">
         <SkillCard
           v-for="skill in mySkill.basic"
           :skill

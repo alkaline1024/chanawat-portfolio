@@ -28,11 +28,11 @@ onMounted(async () => {
     />
     <div class="space-y-12">
       <button
-        class="w-fit cursor-pointer rounded-md border-2 border-yellow-500 bg-yellow-300/5 px-4 py-1 text-xl font-medium text-yellow-500 transition-all hover:scale-115 hover:bg-yellow-400/10"
+        class="z-0 w-fit cursor-pointer rounded-md border-2 border-yellow-500 bg-yellow-300/5 px-4 py-1 text-xl font-medium text-yellow-500 transition-all hover:scale-115 hover:bg-yellow-400/10"
         :class="{
           'animate-bounce': bounced,
           'scale-115 duration-400': zoomed,
-          '!scale-120 !bg-yellow-500 !text-white': celebrating,
+          '!scale-150 !bg-yellow-500 !text-white duration-400': celebrating,
         }"
         @click="celebrating = true"
       >

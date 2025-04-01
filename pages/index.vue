@@ -1,8 +1,6 @@
 <template>
-  <UContainer class="space-y-32">
-    <div class="pb-12">
-      <SectionHome id="home" />
-    </div>
+  <UContainer class="space-y-36">
+    <SectionHome id="home" />
     <SectionSkills id="skills" />
     <SectionEducation id="education" />
     <SectionBlogs id="blogs" />
