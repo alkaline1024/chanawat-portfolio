@@ -1,10 +1,11 @@
 <template>
   <UContainer class="space-y-32">
     <div class="pb-12">
-      <LazySectionHome id="home" />
+      <SectionHome id="home" />
     </div>
-    <LazySectionSkills id="skills" />
-    <LazySectionEducation id="education" />
-    <LazySectionContact id="contact" />
+    <SectionSkills id="skills" />
+    <SectionEducation id="education" />
+    <SectionBlogs id="blogs" />
+    <SectionContact id="contact" />
   </UContainer>
 </template>
