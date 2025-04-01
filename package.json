@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
     "@iconify-json/ic": "^1.2.2",
     "@lottiefiles/dotlottie-vue": "^0.6.1",
     "@nuxt/fonts": "^0.11.0",
