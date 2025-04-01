@@ -4,7 +4,7 @@ const { locale } = useI18n();
 
 <template>
   <div class="space-y-2">
-    <h1 class="font-medium">Work Experiences</h1>
+    <h1 class="font-medium">Experiences</h1>
     <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div class="relative">
         <img

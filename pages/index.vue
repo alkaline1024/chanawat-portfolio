@@ -3,7 +3,8 @@
     <SectionHome id="home" />
     <SectionSkills id="skills" />
     <SectionEducation id="education" />
-    <SectionWorkExperiences id="work-experiences" />
+    <SectionExperiences id="experiences" />
+    <SectionProjects id="projects" />
     <SectionBlogs id="blogs" />
     <SectionContact id="contact" />
   </UContainer>
