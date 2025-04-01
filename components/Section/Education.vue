@@ -8,7 +8,7 @@ const { locale } = useI18n();
     <div class="mt-8 flex items-center gap-8">
       <img
         src="/img/PSU-Emblem.png"
-        class="drop-shadow-primary-lg w-28"
+        class="drop-shadow-lg w-28"
       />
       <div class="space-y-2">
         <h3 class="font-medium">Prince of Songkhla University</h3>

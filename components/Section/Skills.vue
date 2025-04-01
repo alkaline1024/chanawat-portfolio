@@ -294,24 +294,24 @@ const mySkill = {
         </p>
       </div>
     </div>
-    <div class="max-w-[1215px] overflow-hidden rounded-xl shadow-lg shadow-black/8">
-      <h4 class="bg-primary-300 dark:bg-primary-700 w-full px-4 py-2 font-medium shadow">Advance</h4>
-      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 p-6 dark:bg-green-200/6">
-        <SkillCard
+    <div class="overflow-hidden rounded-xl bg-white shadow-lg">
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow dark:bg-stone-700">Advance</h3>
+      <div class="flex w-full flex-wrap gap-5 p-6 dark:bg-stone-800">
+        <CardSkill
           v-for="skill in mySkill.advance"
           :skill
         />
       </div>
-      <h4 class="bg-primary-300 dark:bg-primary-700 w-full px-4 py-2 font-medium shadow">Intermediate</h4>
-      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 p-6 dark:bg-green-200/6">
-        <SkillCard
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow dark:bg-stone-700">Intermediate</h3>
+      <div class="flex w-full flex-wrap gap-5 p-6 dark:bg-stone-800">
+        <CardSkill
           v-for="skill in mySkill.intermediate"
           :skill
         />
       </div>
-      <h4 class="bg-primary-300 dark:bg-primary-700 w-full px-4 py-2 font-medium shadow">Basic</h4>
-      <div class="flex w-full flex-wrap gap-5 bg-green-400/5 p-6 dark:bg-green-200/6">
-        <SkillCard
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow dark:bg-stone-700">Basic</h3>
+      <div class="flex w-full flex-wrap gap-5 p-6 dark:bg-stone-800">
+        <CardSkill
           v-for="skill in mySkill.basic"
           :skill
         />
