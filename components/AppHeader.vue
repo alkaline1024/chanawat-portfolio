@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
+// prettier-ignore
 const tabs = computed(() => [
   { name: t("home"), target: "home", icon: "ic:outline-home", activeIcon: "ic:round-home" },
   { name: t("skills"), target: "skills", icon: "ic:round-star-border", activeIcon: "ic:round-star" },
   { name: t("education"), target: "education", icon: "ic:outline-school", activeIcon: "ic:round-school" },
+  { name: t("work-experiences"), target: "work-experiences", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
   { name: t("projects"), target: "projects", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
-  // { name: t("resume"), target: "resume", icon: "ic:outline-contact-page", activeIcon: "ic:round-contact-page" },
   { name: t("blogs"), target: "blogs", icon: "ic:outline-message", activeIcon: "ic:message" },
   { name: t("contact"), target: "contact", icon: "ic:outline-local-phone", activeIcon: "ic:local-phone" },
 ]);

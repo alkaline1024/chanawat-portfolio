@@ -1,9 +1,9 @@
 <template>
-  <UContainer class="space-y-36">
+  <UContainer class="space-y-30">
     <SectionHome id="home" />
     <SectionSkills id="skills" />
     <SectionEducation id="education" />
-    <SectionProjects id="projects" />
+    <SectionWorkExperiences id="work-experiences" />
     <SectionBlogs id="blogs" />
     <SectionContact id="contact" />
   </UContainer>
