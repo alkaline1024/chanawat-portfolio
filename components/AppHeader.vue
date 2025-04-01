@@ -7,6 +7,7 @@ const tabs = computed(() => [
   { name: t("projects"), target: "projects", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
   // { name: t("resume"), target: "resume", icon: "ic:outline-contact-page", activeIcon: "ic:round-contact-page" },
   { name: t("blog"), target: "blog", icon: "ic:outline-message", activeIcon: "ic:message" },
+  { name: t("education"), target: "education", icon: "ic:outline-school", activeIcon: "ic:round-school" },
   { name: t("contact"), target: "contact", icon: "ic:outline-local-phone", activeIcon: "ic:local-phone" },
 ]);
 

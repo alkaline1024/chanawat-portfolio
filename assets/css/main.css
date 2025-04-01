@@ -50,3 +50,17 @@ h4 {
 .shadow-primary {
   @apply shadow-stone-900/15 dark:shadow-white/15;
 }
+
+.drop-shadow-primary-xl {
+  @apply drop-shadow-xl dark:drop-shadow-[0_9px_7px_rgba(255,255,255,0.25)];
+}
+
+.drop-shadow-primary-lg {
+  @apply drop-shadow-lg dark:drop-shadow-[0_4px_4px_rgba(255,255,255,0.15)];
+}
+.drop-shadow-primary-md {
+  @apply drop-shadow-md dark:drop-shadow-[0_3px_3px_rgba(255,255,255,0.12)];
+}
+.drop-shadow-primary-sm {
+  @apply drop-shadow-sm dark:drop-shadow-[0_4px_4px_rgba(255,255,255,0.15)];
+}

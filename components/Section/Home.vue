@@ -37,7 +37,7 @@ onMounted(async () => {
         @click="celebrating = true"
       >
         Hello Everyone
-        <div class="animate-wave-infinite drop-shadow-xl dark:drop-shadow-[0_9px_7px_rgba(0,0,0,0.25)]">👋</div>
+        <div class="animate-wave-infinite drop-shadow-primary-xl">👋</div>
       </button>
       <h1 class="py-2 !text-6xl font-semibold">I'm Chanawat Thuasuphap</h1>
       <h3>

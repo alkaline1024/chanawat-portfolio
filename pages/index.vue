@@ -4,6 +4,7 @@
       <LazySectionHome id="home" />
     </div>
     <LazySectionSkills id="skills" />
+    <LazySectionEducation id="education" />
     <LazySectionContact id="contact" />
   </UContainer>
 </template>
