@@ -6,11 +6,9 @@
   --ui-container: 1600px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
+  @apply bg-white dark:bg-stone-900;
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 18px;
 }
@@ -40,7 +38,7 @@ h4 {
 }
 
 .bg-primary {
-  @apply bg-white dark:bg-stone-900;
+  @apply bg-white dark:bg-stone-800;
 }
 
 .bg-secondary {
@@ -48,11 +46,11 @@ h4 {
 }
 
 .border-primary {
-  @apply border-stone-900 dark:border-white;
+  @apply border-stone-800 dark:border-white;
 }
 
 .shadow-primary {
-  @apply shadow-stone-900/15 dark:shadow-white/15;
+  @apply shadow-stone-800/15 dark:shadow-black/15
 }
 
 .drop-shadow-primary-xl {

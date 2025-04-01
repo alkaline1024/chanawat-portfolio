@@ -16,8 +16,8 @@ const { locale } = useI18n();
             class="relative flex h-36 w-full flex-col items-center justify-center bg-gradient-to-b from-gray-300 to-gray-50"
           >
             <div class="pt-8 text-center text-2xl text-stone-950">R202 Laboratory</div>
-            <div class="absolute right-1 bottom-1 flex items-center gap-1 text-base text-black opacity-80">
-              <UIcon name="ic:outline-location-on" /> Computer Engineering, Prince of Songkla University
+            <div class="absolute right-2 bottom-1 flex items-center gap-1 text-base text-black opacity-80">
+              <UIcon name="ic:outline-location-on" /> CoE, Prince of Songkla University
             </div>
           </div>
           <div class="bg-primary space-y-3 p-6">
@@ -43,7 +43,7 @@ const { locale } = useI18n();
             class="relative flex h-36 w-full flex-col items-center justify-center bg-gradient-to-b from-orange-600 to-[#F29620] dark:from-orange-700 dark:to-yellow-600"
           >
             <div class="pt-8 text-center text-2xl text-white">Dev Forward Co., Ltd.</div>
-            <div class="absolute right-1 bottom-1 flex items-center gap-1 text-base text-white opacity-95">
+            <div class="absolute right-2 bottom-1 flex items-center gap-1 text-base text-white opacity-95">
               <UIcon name="ic:outline-location-on" /> Huai Khwang, Bangkok
             </div>
           </div>
@@ -70,7 +70,7 @@ const { locale } = useI18n();
             class="relative flex h-36 w-full flex-col items-center justify-center bg-gradient-to-b from-purple-900 to-purple-600"
           >
             <div class="pt-8 text-center text-2xl text-white">Import Star Co., Ltd.</div>
-            <div class="absolute right-1 bottom-1 flex items-center gap-1 text-base text-white opacity-90">
+            <div class="absolute right-2 bottom-1 flex items-center gap-1 text-base text-white opacity-90">
               <UIcon name="ic:outline-location-on" /> Hat Yai, Songkhla
             </div>
           </div>

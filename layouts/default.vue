@@ -15,7 +15,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="bg-primary relative">
+  <div class="relative">
     <AppHeader class="fixed z-100" />
     <div class="z-10 min-h-screen">
       <slot />

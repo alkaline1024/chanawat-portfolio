@@ -294,7 +294,7 @@ const mySkill = {
         </p>
       </div>
     </div>
-    <div class="max-w-[1215px] overflow-hidden rounded-lg shadow-lg shadow-black/8">
+    <div class="max-w-[1215px] overflow-hidden rounded-xl shadow-lg shadow-black/8">
       <h4 class="bg-primary-300 dark:bg-primary-700 w-full px-4 py-2 font-medium shadow">Advance</h4>
       <div class="flex w-full flex-wrap gap-5 bg-green-400/5 p-6 dark:bg-green-200/6">
         <SkillCard
