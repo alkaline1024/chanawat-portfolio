@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const props = defineProps<{ blog: { title: string; content: string; publishDate: string; url: string } }>();
 const blog = props.blog;
+
+const { locale } = useI18n();
+const formatted = new Intl.DateTimeFormat(locale.value || "en-US", {
+  dateStyle: "long",
+});
 </script>
 
 <template>
@@ -23,7 +28,7 @@ const blog = props.blog;
     </h4>
     <div class="z-1">
       <p class="opacity-70">
-        {{ blog.publishDate }}
+        {{ formatted.format(new Date(blog.publishDate)) }}
       </p>
       <p class="line-clamp-4 text-ellipsis">
         {{ blog.content }}
