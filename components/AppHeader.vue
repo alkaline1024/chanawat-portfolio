@@ -14,6 +14,16 @@ const tabs = computed(() => [
   { id: "header-tab-contact",name: t("contact"), target: "contact", icon: "ic:outline-local-phone", activeIcon: "ic:local-phone" },
 ]);
 
+function scrollToTarget(id: string) {
+  const target = document.getElementById(id);
+  if (target) {
+    window.scrollTo({
+      top: target.offsetTop - 72,
+      behavior: "smooth",
+    });
+  }
+}
+
 const activeTab = ref("home");
 const isActive = (target: string) => activeTab.value === target;
 
@@ -62,8 +72,9 @@ watch(y, (currentPosition) => {
       :id="tab.id"
       :key="tab.target"
       class="relative h-full w-fit place-content-center"
+      @click="scrollToTarget(tab.target)"
     >
-      <a
+      <div
         class="z-10 flex cursor-pointer items-center justify-center gap-2 px-4 mix-blend-plus-darker dark:mix-blend-screen"
         :href="`#${tab.target}`"
       >
@@ -72,7 +83,7 @@ watch(y, (currentPosition) => {
           :name="isActive(tab.target) ? tab.activeIcon : tab.icon"
         />
         {{ tab.name }}
-      </a>
+      </div>
     </div>
     <div class="bg-primary z-10 flex items-center justify-center gap-4 p-4">
       <ChangeLanguageButton />
