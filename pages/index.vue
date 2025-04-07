@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="space-y-30">
+  <UContainer class="mb-64 space-y-30">
     <SectionHome id="home" />
     <SectionSkills id="skills" />
     <SectionEducation id="education" />
