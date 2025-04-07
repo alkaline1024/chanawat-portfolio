@@ -1,71 +1,71 @@
 <script setup lang="ts">
+import { useWindowScroll } from "@vueuse/core";
+
 const { t } = useI18n();
 
 // prettier-ignore
 const tabs = computed(() => [
-  { name: t("home"), target: "home", icon: "ic:outline-home", activeIcon: "ic:round-home" },
-  { name: t("skills"), target: "skills", icon: "ic:round-star-border", activeIcon: "ic:round-star" },
-  { name: t("education"), target: "education", icon: "ic:outline-school", activeIcon: "ic:round-school" },
-  { name: t("experiences"), target: "experiences", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
-  { name: t("projects"), target: "projects", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
-  { name: t("blogs"), target: "blogs", icon: "ic:outline-message", activeIcon: "ic:message" },
-  { name: t("contact"), target: "contact", icon: "ic:outline-local-phone", activeIcon: "ic:local-phone" },
+  { id: "header-tab-home", name: t("home"), target: "home", icon: "ic:outline-home", activeIcon: "ic:round-home" },
+  { id: "header-tab-skills", name: t("skills"), target: "skills", icon: "ic:round-star-border", activeIcon: "ic:round-star" },
+  { id: "header-tab-education", name: t("education"), target: "education", icon: "ic:outline-school", activeIcon: "ic:round-school" },
+  { id: "header-tab-experiences",name: t("experiences"), target: "experiences", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
+  { id: "header-tab-projects",name: t("projects"), target: "projects", icon: "ic:round-work-outline", activeIcon: "ic:round-work" },
+  { id: "header-tab-blogs",name: t("blogs"), target: "blogs", icon: "ic:outline-message", activeIcon: "ic:message" },
+  { id: "header-tab-contact",name: t("contact"), target: "contact", icon: "ic:outline-local-phone", activeIcon: "ic:local-phone" },
 ]);
 
 const activeTab = ref("home");
-
 const isActive = (target: string) => activeTab.value === target;
 
-let observer: IntersectionObserver | null = null;
+const targets = ref<HTMLElement[]>([]);
+for (const tab of tabs.value) {
+  const target = document.getElementById(tab.target);
+  if (target) {
+    targets.value.push(target);
+  }
+}
 
-onMounted(() => {
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-  };
+const buffer = window.innerHeight / 4;
+const { x, y } = useWindowScroll();
+const highlightTabStyle = ref();
 
-  observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        activeTab.value = entry.target.id;
-        break;
+watch(y, (currentPosition) => {
+  console.log(y.value);
+  for (const target of targets.value) {
+    if (currentPosition < target.offsetTop + target.offsetHeight - buffer) {
+      activeTab.value = target.id;
+      const tabElement = document.getElementById(`header-tab-${target.id}`);
+      console.log(tabElement);
+      if (!tabElement) {
+        continue;
       }
+      highlightTabStyle.value = {
+        left: `${tabElement.offsetLeft}px`,
+        width: `${tabElement.offsetWidth}px`,
+      };
+      break;
     }
-  }, options);
-
-  tabs.value.forEach((tab) => {
-    const element = document.getElementById(tab.target);
-    if (element && observer) {
-      observer.observe(element);
-    }
-  });
-});
-
-onBeforeUnmount(() => {
-  if (observer) {
-    observer.disconnect();
   }
 });
 </script>
 
 <template>
   <div
-    class="flex h-[64px] w-full justify-end border-b border-black/15 bg-white/75 backdrop-blur-sm dark:border-white/15 dark:bg-stone-900/75"
+    class="difference fixed flex h-[64px] w-full justify-end border-b border-black/15 bg-white/50 backdrop-blur-xl dark:bg-stone-900/50"
   >
     <div
+      class="light:bg-green-500 absolute top-3 z-0 rounded-full p-5 opacity-90 transition-all dark:bg-green-600"
+      :style="highlightTabStyle"
+    />
+    <div
       v-for="tab in tabs"
+      :id="tab.id"
       :key="tab.target"
       class="relative h-full w-fit place-content-center"
     >
       <a
-        class="z-10 flex cursor-pointer items-center justify-center gap-2 px-4 text-lg"
+        class="z-10 flex cursor-pointer items-center justify-center gap-2 px-4 mix-blend-plus-darker dark:mix-blend-screen"
         :href="`#${tab.target}`"
-        :class="
-          isActive(tab.target)
-            ? 'bg-secondary text-secondary rounded-full p-1 text-white'
-            : 'hover:bg-primary/25 text-primary'
-        "
       >
         <UIcon
           class="text-2xl"
