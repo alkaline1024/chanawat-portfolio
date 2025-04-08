@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-2 pb-28">
+  <div class="space-y-2">
     <h1 class="font-medium">Contact Me</h1>
     <p class="opacity-70">Discuss a project or just want to say hi? My Inbox is open for all.</p>
     <p class="py-2">
