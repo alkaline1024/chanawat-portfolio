@@ -2,6 +2,7 @@
 import { useMediaQuery } from "@vueuse/core";
 
 const { t } = useI18n();
+const isOpenDrawer = ref(false);
 const isDesktop = useMediaQuery("(min-width: 768px)");
 
 // prettier-ignore
@@ -47,6 +48,7 @@ function updateHighlightTab() {
 function scrollToTarget(id: string) {
   const target = document.getElementById(id);
   if (target) {
+    isOpenDrawer.value = false;
     window.scrollTo({
       top: target.offsetTop - 72,
       behavior: "smooth",
@@ -117,10 +119,11 @@ onMounted(() => {
         direction="top"
         :overlay="false"
         :ui="{ content: 'bg-primary' }"
+        v-model:open="isOpenDrawer"
       >
         <UIcon
           name="ic:round-menu"
-          class="my-auto mr-4 cursor-pointer text-5xl"
+          class="my-auto mr-4 cursor-pointer text-4xl"
         />
         <template #content>
           <div class="h-full w-full text-lg">
