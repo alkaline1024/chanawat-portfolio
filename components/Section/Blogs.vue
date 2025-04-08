@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useAutoAnimate } from "@formkit/auto-animate/vue";
+const { t } = useI18n();
 const [blogSection] = useAutoAnimate();
 
 const defaultVisibleCount = 3;
@@ -19,7 +20,7 @@ const blogs = [
   {
     title: "Concurrency Parallelism และ Asynchronous ต่างกันตรงไหน? พร้อมยกตัวอย่าง C++",
     content:
-    "บทความนี้อธิบายถึงความแตกต่างระหว่าง Concurrency, Parallelism และ Asynchronous พร้อมยกตัวอย่างการใช้งานในภาษา C++",
+      "บทความนี้อธิบายถึงความแตกต่างระหว่าง Concurrency, Parallelism และ Asynchronous พร้อมยกตัวอย่างการใช้งานในภาษา C++",
     publishDate: "Mar 15, 2024",
     url: "https://medium.com/@eartheisen/concurrency-parallelism-และ-asynchronous-ต่างกันตรงไหน-พร้อมยกตัวอย่าง-c-6e0a1b5e0b7e",
   },
@@ -32,14 +33,14 @@ const blogs = [
   {
     title: "อย่าพึ่งออกแบบระบบ ถ้าคุณยังไม่รู้จัก CAP Theorem",
     content:
-    "บทความนี้อธิบายเกี่ยวกับ CAP Theorem ซึ่งเป็นทฤษฎีที่อธิบายข้อจำกัดของระบบกระจายศูนย์ (distributed systems)",
+      "บทความนี้อธิบายเกี่ยวกับ CAP Theorem ซึ่งเป็นทฤษฎีที่อธิบายข้อจำกัดของระบบกระจายศูนย์ (distributed systems)",
     publishDate: "Mar 14, 2024",
     url: "https://medium.com/@eartheisen/อย่าพึ่งออกแบบระบบ-ถ้าคุณยังไม่รู้จัก-cap-theorem-4f8a3b2e9d5e",
   },
   {
     title: "MPI หรือ Message Passing Interface คืออะไร?",
     content:
-    "บทความนี้แนะนำ MPI (Message Passing Interface) ซึ่งเป็นมาตรฐานสำหรับการสื่อสารระหว่างโปรเซสในระบบคอมพิวเตอร์แบบขนาน",
+      "บทความนี้แนะนำ MPI (Message Passing Interface) ซึ่งเป็นมาตรฐานสำหรับการสื่อสารระหว่างโปรเซสในระบบคอมพิวเตอร์แบบขนาน",
     publishDate: "Mar 14, 2024",
     url: "https://medium.com/@eartheisen/mpi-หรือ-message-passing-interface-คืออะไร-2e3a4b7c8d9e",
   },
@@ -52,7 +53,7 @@ const blogs = [
   {
     title: "จุดเริ่มต้นและการพัฒนาการของ High-Performance Computing (ตอนที่ 2)",
     content:
-    "บทความนี้เล่าต่อถึงการพัฒนาของ High-Performance Computing หลังจากยุคของ Cray ผู้บุกเบิกซูเปอร์คอมพิวเตอร์",
+      "บทความนี้เล่าต่อถึงการพัฒนาของ High-Performance Computing หลังจากยุคของ Cray ผู้บุกเบิกซูเปอร์คอมพิวเตอร์",
     publishDate: "Mar 13, 2024",
     url: "https://medium.com/@eartheisen/จุดเริ่มต้นและการพัฒนาการของ-high-performance-computing-ตอนที่-2-6e7f8a9b0c1d",
   },
@@ -72,7 +73,7 @@ const blogs = [
   {
     title: "ไขคำตอบ Parallel Computing เร็วกว่า Sequential จริงหรือ?",
     content:
-    "บทความนี้วิเคราะห์การทำงานของ Parallel Computing และ Sequential Computing ว่าแบบใดมีประสิทธิภาพมากกว่ากัน",
+      "บทความนี้วิเคราะห์การทำงานของ Parallel Computing และ Sequential Computing ว่าแบบใดมีประสิทธิภาพมากกว่ากัน",
     publishDate: "Feb 26, 2024",
     url: "https://medium.com/@eartheisen/ไขคำตอบ-parallel-computing-เร็วกว่า-sequential-จริงหรือ-9a0b1c2d3e4f",
   },
@@ -97,10 +98,9 @@ const blogs = [
 ];
 </script>
 
-
 <template>
   <div class="space-y-2">
-    <h1 class="font-medium">Blogs</h1>
+    <h1 class="font-medium">{{ t("blogs") }}</h1>
     <div
       ref="blogSection"
       class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
@@ -114,7 +114,7 @@ const blogs = [
       <UButton
         size="md"
         variant="outline"
-        :label="isExpanded ? 'Show Less' : 'Show More'"
+        :label="isExpanded ? t('show-less') : t('show-more')"
         :icon="isExpanded ? 'ic:baseline-keyboard-arrow-up' : 'ic:baseline-keyboard-arrow-down'"
         :ui="{
           leadingIcon: 'text-lg',

@@ -7,5 +7,22 @@
   "resume": "Resume",
   "blogs": "Blogs",
   "education": "Education",
-  "contact": "Contact"
+  "contact": "Contact",
+  "contact-me": "Contact Me",
+  "my-resume": "My Resume",
+  "hello-everyone": "Hello Everyone",
+  "introduction-description": "A passionate Full Stack Developer 🚀 with hands-on experience in building Web and Mobile applications using JavaScript, Nuxt, Svelte, FastAPI, Fastify, Flask, and Flutter — focused on building clean and easy-to-use applications with modern tools and frameworks.",
+  "full-stack-description": "Full Stack Developer with a passion for learning and exploring all kinds of tech stacks",
+  "advance": "Advance",
+  "intermediate": "Intermediate",
+  "basic": "Basic",
+  "show-more": "Show More",
+  "show-less": "Show Less",
+  "contact-invitation": "Discuss a project or just want to say hi? My Inbox is open for all.",
+  "open-to-opportunities-introduction": "I'm actively seeking new challenges and opportunities in full-stack development. Let's build something innovative together!",
+  "open-for-opportunities": "Open for opportunities",
+  "yes": "Yes",
+  "no": "No",
+  "bangkok": "Bangkok",
+  "remote": "Remote"
 }

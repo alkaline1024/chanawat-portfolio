@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { type DotLottie, DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
+const { t, locale } = useI18n();
+
 const wait = async (milliseconds: number) => {
   return await new Promise((resolve) => setTimeout(resolve, milliseconds));
 };
@@ -40,29 +42,34 @@ onMounted(async () => {
         class="z-0 w-fit cursor-pointer rounded-md border-2 border-yellow-500 bg-yellow-300/5 px-4 py-1 text-xl font-medium text-yellow-500 transition-all hover:scale-115 hover:bg-yellow-400/10"
         :class="{
           'animate-bounce': bounced,
-          'scale-115 duration-400': zoomed,
-          '!scale-150 !bg-yellow-500 !text-white duration-400': celebrating,
+          'ml-10 scale-115 duration-400': zoomed,
+          'ml-10 !scale-150 !bg-yellow-500 !text-white duration-400': celebrating,
         }"
         @click="celebrating = true"
       >
-        Hello Everyone
+        {{ t("hello-everyone") }}
         <div class="animate-wave-infinite drop-shadow-primary-xl">👋</div>
       </button>
-      <h1 class="py-2 !text-6xl font-semibold max-md:!text-5xl">I'm Chanawat Thuasuphap</h1>
+      <div class="space-y-2 py-2">
+        <h1 class="!text-7xl font-bold max-md:!text-6xl flex gap-2">
+          {{ locale == "th" ? "เอิร์ท" : "I'm Earth!" }}
+        </h1>
+        <h2 class="!text-4xl max-md:!text-3xl">
+          {{ locale == "th" ? "ชนาวัฒน์ ทั้วสุภาพ" : "Chanawat Thuasuphap" }}
+        </h2>
+      </div>
       <h3>
-        A passionate Full Stack Developer 🚀 with hands-on experience in building Web and Mobile applications using
-        JavaScript, Nuxt, Svelte, FastAPI, Fastify, Flask, and Flutter — focused on building clean and easy-to-use
-        applications with modern tools and frameworks.
+        {{ t("introduction-description") }}
       </h3>
       <div class="flex items-center gap-8 max-md:gap-3">
         <UButton
-          label="Contact Me"
+          :label="t('contact-me')"
           @click="scrollToContact"
         />
         <UButton
           icon="ic:baseline-download"
           :ui="{ leadingIcon: 'text-2xl' }"
-          label="My Resume"
+          :label="t('my-resume')"
           disabled
           class="hover:!bg-primary-700 !bg-primary-700 opacity-90"
         />

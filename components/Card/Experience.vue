@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n();
 const props = defineProps<{
   imgSrc: string;
   backgroundColor: string;
@@ -41,8 +42,8 @@ const toggleShow = () => {
         </h3>
         <p class="text-center opacity-70">{{ period }}</p>
         <div
-          class="overflow-hidden space-y-4 indent-4 transition-all duration-400"
-          :class="showMore ? ' max-h-[300vh]' : 'max-h-28'"
+          class="space-y-4 overflow-hidden indent-4 transition-all duration-400"
+          :class="showMore ? 'max-h-[300vh]' : 'max-h-28'"
         >
           <p
             v-for="(paragraph, index) in description"
@@ -54,7 +55,7 @@ const toggleShow = () => {
         <UButton
           size="md"
           variant="outline"
-          :label="showMore ? 'Show Less' : 'Show More'"
+          :label="showMore ? t('show-less') : t('show-more')"
           :icon="showMore ? 'ic:baseline-keyboard-arrow-up' : 'ic:baseline-keyboard-arrow-down'"
           :ui="{ leadingIcon: 'text-lg' }"
           class="pr-4 pl-3 hover:text-white"

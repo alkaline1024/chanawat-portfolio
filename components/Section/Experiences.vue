@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 </script>
 
 <template>
   <div class="space-y-2">
-    <h1 class="font-medium">Experiences</h1>
+    <h1 class="font-medium">{{ t("experiences") }}</h1>
     <div class="mt-20 grid grid-cols-1 gap-8 max-md:gap-20 md:grid-cols-2 lg:grid-cols-3">
       <CardExperience
         imgSrc="/chanawat-portfolio/img/logo-r202.png"

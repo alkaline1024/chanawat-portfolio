@@ -1,16 +1,19 @@
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
+
 <template>
   <div class="space-y-2">
-    <h1 class="font-medium">Contact Me</h1>
-    <p class="opacity-70">Discuss a project or just want to say hi? My Inbox is open for all.</p>
-    <p class="py-2">
-      "I'm actively seeking new challenges and opportunities in full-stack development. Let's build something innovative
-      together!"
-    </p>
+    <h1 class="font-medium">{{ t("contact-me") }}</h1>
+    <p class="opacity-70">{{ t("contact-invitation") }}</p>
+    <p class="py-2">"{{ t("open-to-opportunities-introduction") }}"</p>
     <div>
-      <p class="flex items-center gap-2"><UIcon name="ic:outline-location-on" />Bangkok | Remote</p>
+      <p class="flex items-center gap-2">
+        <UIcon name="ic:outline-location-on" />{{ t("bangkok") }} | {{ t("remote") }}
+      </p>
       <div class="flex items-center gap-2">
-        <UIcon name="ic:outline-work-outline" /> Open for opportunities:
-        <div class="bg-secondary text-secondary rounded-full px-3 py-1 text-sm font-semibold">Yes</div>
+        <UIcon name="ic:outline-work-outline" /> {{ t("open-for-opportunities") }}:
+        <div class="bg-secondary text-secondary rounded-full px-3 py-1 text-sm font-semibold">{{ t("yes") }}</div>
       </div>
     </div>
     <div

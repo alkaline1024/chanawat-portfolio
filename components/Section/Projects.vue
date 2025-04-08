@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const { t, locale } = useI18n();
 const projects: IProject[] = [
   {
     name: "Auth & App Portal Management",
@@ -124,7 +124,7 @@ const projects: IProject[] = [
 
 <template>
   <div class="space-y-2">
-    <h1 class="font-medium">Projects</h1>
+    <h1 class="font-medium">{{ t("projects") }}</h1>
     <div class="mt-8 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
       <CardProject
         v-for="project in projects"

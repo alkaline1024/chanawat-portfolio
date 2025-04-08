@@ -2,6 +2,8 @@
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 import { useMediaQuery } from "@vueuse/core";
 
+const { t } = useI18n();
+
 const mySkill = {
   advance: [
     {
@@ -292,28 +294,28 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
         src="/chanawat-portfolio/lotties/skills.json"
       />
       <div class="space-y-4">
-        <h2 class="py-2 !text-6xl font-semibold">Skills</h2>
+        <h2 class="py-2 !text-6xl font-semibold">{{ t("skills") }}</h2>
         <p class="text-xl opacity-70">
-          Full Stack Developer with a passion for learning and exploring all kinds of tech stacks
+          {{ t("full-stack-description") }}
         </p>
       </div>
     </div>
     <div class="overflow-hidden rounded-xl shadow-lg">
-      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">Advance</h3>
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">{{ t("advance") }}</h3>
       <div class="flex w-full flex-wrap gap-5 p-6 max-md:justify-center max-md:gap-4 max-md:p-4 dark:bg-stone-800">
         <CardSkill
           v-for="skill in mySkill.advance"
           :skill
         />
       </div>
-      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">Intermediate</h3>
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">{{ t("intermediate") }}</h3>
       <div class="flex w-full flex-wrap gap-5 p-6 max-md:justify-center max-md:gap-4 max-md:p-4 dark:bg-stone-800">
         <CardSkill
           v-for="skill in mySkill.intermediate"
           :skill
         />
       </div>
-      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">Basic</h3>
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">{{ t("basic") }}</h3>
       <div class="flex w-full flex-wrap gap-5 p-6 max-md:justify-center max-md:gap-4 max-md:p-4 dark:bg-stone-800">
         <CardSkill
           v-for="skill in mySkill.basic"
