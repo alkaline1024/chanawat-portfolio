@@ -3,7 +3,7 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 </script>
 
 <template>
-  <UContainer class="space-y-30">
+  <UContainer class="space-y-30 max-md:space-y-10">
     <SectionHome
       id="home"
       class="section"

@@ -21,7 +21,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex items-center gap-8 pt-12 sm:pt-48">
+  <div class="flex items-center justify-center gap-8 pt-12 max-lg:flex-col sm:pt-48">
     <AnimationCelebration
       v-if="celebrating"
       @on-completed="celebrating = false"
