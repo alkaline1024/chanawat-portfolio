@@ -65,10 +65,15 @@ function scrollToTarget(id: string) {
   }
 }
 
+const isInit = ref(false);
 onMounted(() => {
   window.addEventListener("resize", updateHighlightTab);
   window.addEventListener("scroll", updateHighlightTab);
   window.addEventListener("scrollend", () => (scrolling.value = false));
+  setTimeout(() => {
+    updateHighlightTab();
+    isInit.value = true;
+  }, 250);
 });
 </script>
 
@@ -81,7 +86,11 @@ onMounted(() => {
       class="flex justify-end"
     >
       <div
-        class="light:bg-green-400 absolute top-3 z-0 rounded-full p-5 opacity-90 transition-all dark:bg-green-600"
+        class="light:bg-green-400 absolute top-3 z-0 rounded-full p-5 transition-all dark:bg-green-600"
+        :class="{
+          'opacity-100': isInit,
+          'opacity-0': !isInit,
+        }"
         :style="highlightTabStyle"
       />
       <div
