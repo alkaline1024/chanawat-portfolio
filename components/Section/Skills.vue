@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+import { useMediaQuery } from "@vueuse/core";
 
 const mySkill = {
   advance: [
@@ -276,12 +277,15 @@ const mySkill = {
     },
   ],
 };
+
+const isDesktop = useMediaQuery("(min-width: 768px)");
 </script>
 
 <template>
   <div>
-    <div class="flex items-center gap-8">
+    <div class="flex items-center gap-8 pt-12 max-lg:flex-col-reverse max-md:pb-8">
       <DotLottieVue
+        v-if="isDesktop"
         class="aspect-square h-96 w-96 drop-shadow-[0_25px_25px_rgba(0,0,0,0.075)] dark:drop-shadow-[0_25px_25px_rgba(255,255,255,0.075)]"
         autoplay
         loop
@@ -294,28 +298,35 @@ const mySkill = {
         </p>
       </div>
     </div>
-    <div class="overflow-hidden rounded-xl bg-white shadow-lg">
-      <h3 class="w-full bg-stone-100 p-4 font-medium shadow dark:bg-stone-700">Advance</h3>
-      <div class="flex w-full flex-wrap gap-5 p-6 dark:bg-stone-800">
+    <div class="overflow-hidden rounded-xl shadow-lg">
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">Advance</h3>
+      <div class="flex w-full flex-wrap gap-5 p-6 max-md:justify-center max-md:gap-4 max-md:p-4 dark:bg-stone-800">
         <CardSkill
           v-for="skill in mySkill.advance"
           :skill
         />
       </div>
-      <h3 class="w-full bg-stone-100 p-4 font-medium shadow dark:bg-stone-700">Intermediate</h3>
-      <div class="flex w-full flex-wrap gap-5 p-6 dark:bg-stone-800">
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">Intermediate</h3>
+      <div class="flex w-full flex-wrap gap-5 p-6 max-md:justify-center max-md:gap-4 max-md:p-4 dark:bg-stone-800">
         <CardSkill
           v-for="skill in mySkill.intermediate"
           :skill
         />
       </div>
-      <h3 class="w-full bg-stone-100 p-4 font-medium shadow dark:bg-stone-700">Basic</h3>
-      <div class="flex w-full flex-wrap gap-5 p-6 dark:bg-stone-800">
+      <h3 class="w-full bg-stone-100 p-4 font-medium shadow max-md:p-2 dark:bg-stone-700">Basic</h3>
+      <div class="flex w-full flex-wrap gap-5 p-6 max-md:justify-center max-md:gap-4 max-md:p-4 dark:bg-stone-800">
         <CardSkill
           v-for="skill in mySkill.basic"
           :skill
         />
       </div>
     </div>
+    <DotLottieVue
+      v-if="!isDesktop"
+      class="mx-auto aspect-square h-96 w-96 drop-shadow-[0_25px_25px_rgba(0,0,0,0.075)] dark:drop-shadow-[0_25px_25px_rgba(255,255,255,0.075)]"
+      autoplay
+      loop
+      src="/chanawat-portfolio/lotties/skills.json"
+    />
   </div>
 </template>
