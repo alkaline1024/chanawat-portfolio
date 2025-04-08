@@ -9,6 +9,15 @@ const celebrating = ref(false);
 const bounced = ref(false);
 const zoomed = ref(false);
 
+function scrollToContact() {
+  const contact = document.getElementById("contact");
+  if (contact)
+    window.scrollTo({
+      top: contact.offsetTop - 72,
+      behavior: "smooth",
+    });
+}
+
 onMounted(async () => {
   // Hello's animation
   bounced.value = true;
@@ -21,7 +30,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center gap-8 pt-12 max-lg:flex-col sm:pt-48">
+  <div class="flex items-center justify-center gap-8 pt-32 max-lg:flex-col sm:pt-48">
     <AnimationCelebration
       v-if="celebrating"
       @on-completed="celebrating = false"
@@ -39,16 +48,16 @@ onMounted(async () => {
         Hello Everyone
         <div class="animate-wave-infinite drop-shadow-primary-xl">👋</div>
       </button>
-      <h1 class="py-2 !text-6xl font-semibold">I'm Chanawat Thuasuphap</h1>
+      <h1 class="py-2 !text-6xl font-semibold max-md:!text-5xl">I'm Chanawat Thuasuphap</h1>
       <h3>
         A passionate Full Stack Developer 🚀 with hands-on experience in building Web and Mobile applications using
         JavaScript, Nuxt, Svelte, FastAPI, Fastify, Flask, and Flutter — focused on building clean and easy-to-use
         applications with modern tools and frameworks.
       </h3>
-      <div class="flex items-center gap-8">
+      <div class="flex items-center gap-8 max-md:gap-3">
         <UButton
           label="Contact Me"
-          href="#contact"
+          @click="scrollToContact"
         />
         <UButton
           icon="ic:baseline-download"
@@ -60,7 +69,7 @@ onMounted(async () => {
       </div>
     </div>
     <DotLottieVue
-      class="aspect-square h-96 w-96 drop-shadow-[0_25px_25px_rgba(0,0,0,0.075)] dark:drop-shadow-[0_25px_25px_rgba(255,255,255,0.075)]"
+      class="aspect-square h-96 w-96 drop-shadow-[0_25px_25px_rgba(0,0,0,0.075)] max-md:h-64 max-md:w-64 dark:drop-shadow-[0_25px_25px_rgba(255,255,255,0.075)]"
       autoplay
       loop
       src="/chanawat-portfolio/lotties/full-stack-developer.json"

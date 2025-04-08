@@ -323,7 +323,7 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
     </div>
     <DotLottieVue
       v-if="!isDesktop"
-      class="mx-auto aspect-square h-96 w-96 drop-shadow-[0_25px_25px_rgba(0,0,0,0.075)] dark:drop-shadow-[0_25px_25px_rgba(255,255,255,0.075)]"
+      class="mx-auto aspect-square h-64 w-64 drop-shadow-[0_25px_25px_rgba(0,0,0,0.075)] dark:drop-shadow-[0_25px_25px_rgba(255,255,255,0.075)]"
       autoplay
       loop
       src="/chanawat-portfolio/lotties/skills.json"
