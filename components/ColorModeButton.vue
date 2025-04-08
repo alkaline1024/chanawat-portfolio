@@ -11,32 +11,24 @@ const isDark = computed({
 </script>
 
 <template>
-  <ClientOnly v-if="!colorMode?.forced">
-    <UButton
-      sqaure
-      size="xl"
-      color="neutral"
-      variant="ghost"
-      class="aspect-square rounded-full transition-all cursor-pointer"
+  <button
+    v-if="!colorMode?.forced"
+    class="relative flex cursor-pointer items-center gap-4 hover:bg-green-500 hover:text-white max-md:w-full max-md:p-4 md:aspect-square md:h-9 md:justify-center md:rounded-full dark:hover:bg-green-600"
+    @click="isDark = !isDark"
+  >
+    <div
+      class="flex items-center justify-center gap-4 rounded-full transition-transform"
       :class="{
         'rotate-45': isDark,
       }"
-      @click="isDark = !isDark"
     >
       <UIcon
-        v-if="isDark"
-        name="ic:outline-dark-mode"
-        class="text-2xl -rotate-45"
+        :name="!isDark ? 'ic:outline-dark-mode' : 'ic:outline-light-mode'"
+        class="text-2xl max-md:text-3xl"
       />
-      <UIcon
-        v-else
-        name="ic:outline-light-mode"
-        class="text-2xl"
-      />
-    </UButton>
-
-    <template #fallback>
-      <div class="size-8" />
-    </template>
-  </ClientOnly>
+    </div>
+    <div class="md:hidden">
+      {{ isDark ? "เปลี่ยนเป็นโหมดสว่าง" : "เปลี่ยนเป็นโหมดมืด" }}
+    </div>
+  </button>
 </template>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useMediaQuery } from "@vueuse/core";
+
 const { t } = useI18n();
+const isDesktop = useMediaQuery("(min-width: 768px)");
 
 // prettier-ignore
 const tabs = computed(() => [
@@ -48,6 +51,7 @@ function scrollToTarget(id: string) {
       top: target.offsetTop - 72,
       behavior: "smooth",
     });
+    activeTab.value = id;
     const tabElement = document.getElementById(`header-tab-${id}`);
     if (tabElement) {
       scrolling.value = true;
@@ -68,33 +72,87 @@ onMounted(() => {
 
 <template>
   <div
-    class="difference fixed flex h-[64px] w-full justify-end border-b border-black/15 bg-gray-100/75 shadow-lg shadow-black/5 backdrop-blur-xl dark:bg-stone-900/50"
+    class="fixed z-100 flex h-[64px] w-full justify-end border-b border-black/15 bg-gray-100/75 shadow-lg shadow-black/5 backdrop-blur-xl dark:bg-stone-900/75"
   >
     <div
-      class="light:bg-green-400 absolute top-3 z-0 rounded-full p-5 opacity-90 transition-all dark:bg-green-600"
-      :style="highlightTabStyle"
-    />
-    <div
-      v-for="tab in tabs"
-      :id="tab.id"
-      :key="tab.target"
-      class="header-tab relative h-full w-fit place-content-center"
-      @click="scrollToTarget(tab.target)"
+      v-if="isDesktop"
+      class="flex justify-end"
     >
       <div
-        class="z-10 flex cursor-pointer items-center justify-center gap-2 px-4 mix-blend-plus-darker dark:mix-blend-screen"
-        :href="`#${tab.target}`"
+        class="light:bg-green-400 absolute top-3 z-0 rounded-full p-5 opacity-90 transition-all dark:bg-green-600"
+        :style="highlightTabStyle"
+      />
+      <div
+        v-for="tab in tabs"
+        :id="tab.id"
+        :key="tab.target"
+        class="header-tab relative my-3 w-fit place-content-center rounded-full hover:bg-black/5 dark:hover:bg-white/10"
+        @click="scrollToTarget(tab.target)"
       >
-        <UIcon
-          class="text-2xl"
-          :name="tab.icon"
-        />
-        {{ tab.name }}
+        <div
+          class="z-10 flex cursor-pointer items-center justify-center gap-2 px-4 mix-blend-plus-darker max-lg:px-2 dark:mix-blend-screen"
+          :href="`#${tab.target}`"
+        >
+          <div class="flex items-center gap-2">
+            <div class="flex items-center max-xl:hidden">
+              <UIcon
+                class="text-2xl"
+                :name="tab.icon"
+              />
+            </div>
+            {{ tab.name }}
+          </div>
+        </div>
+      </div>
+      <div class="z-10 flex items-center justify-center gap-4 p-4">
+        <ChangeLanguageButton />
+        <ColorModeButton />
       </div>
     </div>
-    <div class="z-10 flex items-center justify-center gap-4 p-4">
-      <ChangeLanguageButton />
-      <ColorModeButton />
+    <div
+      v-else
+      class="flex justify-end"
+    >
+      <UDrawer
+        direction="top"
+        :overlay="false"
+        :ui="{ content: 'bg-primary' }"
+      >
+        <UIcon
+          name="ic:round-menu"
+          class="my-auto mr-4 cursor-pointer text-5xl"
+        />
+        <template #content>
+          <div class="h-full w-full text-xl">
+            <div
+              v-for="tab in tabs"
+              :id="tab.id"
+              :key="tab.target"
+              class="header-tab relative cursor-pointer place-content-center p-4"
+              :class="
+                isActive(tab.target)
+                  ? 'bg-green-500 text-white dark:bg-green-600'
+                  : 'hover:bg-stone-100 hover:dark:bg-stone-700'
+              "
+              @click="scrollToTarget(tab.target)"
+            >
+              <div class="flex items-center gap-4">
+                <div class="flex items-center">
+                  <UIcon
+                    :name="tab.icon"
+                    class="text-3xl"
+                  />
+                </div>
+                {{ tab.name }}
+              </div>
+            </div>
+            <div class="my-4 border-t border-black/10 dark:border-white/10">
+              <ChangeLanguageButton class="max-h-16 p-4 hover:bg-green-500 hover:text-white hover:dark:bg-green-600" />
+              <ColorModeButton />
+            </div>
+          </div>
+        </template>
+      </UDrawer>
     </div>
   </div>
 </template>

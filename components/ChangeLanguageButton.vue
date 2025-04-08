@@ -1,20 +1,26 @@
 <script setup lang="ts">
-const i18n = useI18n();
+const { locale, setLocale } = useI18n();
 </script>
 
 <template>
-  <button class="rounded-full aspect-square h-full overflow-hidden cursor-pointer">
-    <img
-      v-if="i18n.locale.value === 'th'"
-      class="h-full"
-      src="/img/flag-th.jpg"
-      @click="i18n.setLocale('en')"
-    />
-    <img
-      v-else
-      class="h-full"
-      src="/img/flag-en.png"
-      @click="i18n.setLocale('th')"
-    />
+  <button
+    class="flex h-full w-full cursor-pointer gap-4"
+    @click="setLocale(locale == 'en' ? 'th' : 'en')"
+  >
+    <div class="aspect-square h-full overflow-hidden rounded-full max-md:h-[30px]">
+      <img
+        v-if="locale === 'en'"
+        class="h-full"
+        src="/img/flag-th.jpg"
+      />
+      <img
+        v-else
+        class="h-full"
+        src="/img/flag-en.png"
+      />
+    </div>
+    <div class="md:hidden">
+      {{ locale == "th" ? "Switch to English" : "เปลี่ยนเป็นภาษาไทย" }}
+    </div>
   </button>
 </template>
