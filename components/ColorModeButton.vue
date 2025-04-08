@@ -13,7 +13,7 @@ const isDark = computed({
 <template>
   <button
     v-if="!colorMode?.forced"
-    class="relative flex cursor-pointer items-center gap-4 hover:bg-green-500 hover:text-white max-md:w-full max-md:p-4 md:aspect-square md:h-9 md:justify-center md:rounded-full dark:hover:bg-green-600"
+    class="relative flex cursor-pointer items-center gap-4 hover:bg-green-500 hover:text-white max-md:w-full max-md:px-4 max-md:py-2 md:aspect-square md:h-9 md:justify-center md:rounded-full dark:hover:bg-green-600"
     @click="isDark = !isDark"
   >
     <div
@@ -24,7 +24,7 @@ const isDark = computed({
     >
       <UIcon
         :name="!isDark ? 'ic:outline-dark-mode' : 'ic:outline-light-mode'"
-        class="text-2xl max-md:text-3xl"
+        class="text-2xl"
       />
     </div>
     <div class="md:hidden">

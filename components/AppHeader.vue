@@ -123,12 +123,12 @@ onMounted(() => {
           class="my-auto mr-4 cursor-pointer text-5xl"
         />
         <template #content>
-          <div class="h-full w-full text-xl">
+          <div class="h-full w-full text-lg">
             <div
               v-for="tab in tabs"
               :id="tab.id"
               :key="tab.target"
-              class="header-tab relative cursor-pointer place-content-center p-4"
+              class="header-tab relative cursor-pointer place-content-center px-4 py-2"
               :class="
                 isActive(tab.target)
                   ? 'bg-green-500 text-white dark:bg-green-600'
@@ -140,14 +140,16 @@ onMounted(() => {
                 <div class="flex items-center">
                   <UIcon
                     :name="tab.icon"
-                    class="text-3xl"
+                    class="text-2xl"
                   />
                 </div>
                 {{ tab.name }}
               </div>
             </div>
-            <div class="my-4 border-t border-black/10 dark:border-white/10">
-              <ChangeLanguageButton class="max-h-16 p-4 hover:bg-green-500 hover:text-white hover:dark:bg-green-600" />
+            <div class="my-2 border-t border-black/10 dark:border-white/10">
+              <ChangeLanguageButton
+                class="max-h-16 px-4 py-2 hover:bg-green-500 hover:text-white hover:dark:bg-green-600"
+              />
               <ColorModeButton />
             </div>
           </div>

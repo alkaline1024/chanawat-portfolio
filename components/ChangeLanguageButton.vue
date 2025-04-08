@@ -7,7 +7,7 @@ const { locale, setLocale } = useI18n();
     class="flex h-full w-full cursor-pointer gap-4"
     @click="setLocale(locale == 'en' ? 'th' : 'en')"
   >
-    <div class="aspect-square h-full overflow-hidden rounded-full max-md:h-[30px]">
+    <div class="aspect-square h-full overflow-hidden rounded-full max-md:h-[24px]">
       <img
         v-if="locale === 'en'"
         class="h-full"
