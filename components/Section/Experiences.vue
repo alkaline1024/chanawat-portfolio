@@ -5,7 +5,7 @@ const { locale } = useI18n();
 <template>
   <div class="space-y-2">
     <h1 class="font-medium">Experiences</h1>
-    <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-20 grid grid-cols-1 gap-8 max-md:gap-20 md:grid-cols-2 lg:grid-cols-3">
       <CardExperience
         imgSrc="/chanawat-portfolio/img/logo-r202.png"
         background-color="bg-gradient-to-b from-gray-300 to-gray-50 text-stone-950"
