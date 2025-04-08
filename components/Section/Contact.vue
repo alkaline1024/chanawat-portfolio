@@ -14,7 +14,7 @@
       </div>
     </div>
     <div
-      class="flex flex-wrap justify-start gap-8 pt-12 text-6xl *:transition-all *:hover:contrast-150 *:hover:saturate-75"
+      class="flex flex-wrap justify-start gap-8 pt-12 text-6xl *:transition-all *:hover:contrast-150 *:hover:saturate-75 max-md:gap-4"
     >
       <a
         href="mailto:chanawat2003@gmail.com"
