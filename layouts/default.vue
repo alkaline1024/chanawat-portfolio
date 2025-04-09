@@ -17,7 +17,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="relative">
     <AppHeader class="fixed z-100" />
-    <div class="z-0 min-h-screen overflow-x-hidden">
+    <div id="layout-content" class="z-0 min-h-screen overflow-x-hidden">
       <slot />
     </div>
     <AppFooter />

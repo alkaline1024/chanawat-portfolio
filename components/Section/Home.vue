@@ -51,9 +51,19 @@ onMounted(async () => {
         <div class="animate-wave-infinite drop-shadow-primary-xl">👋</div>
       </button>
       <div class="space-y-2 py-2">
-        <h1 class="!text-7xl font-bold max-md:!text-6xl flex gap-2">
-          {{ locale == "th" ? "เอิร์ท" : "I'm Earth!" }}
-        </h1>
+        <div class="flex items-center">
+          <h1 class="!text-7xl font-bold max-md:!text-6xl">
+            {{ locale == "th" ? "เอิร์ท" : "I'm Earth!" }}
+          </h1>
+          <div class="relative h-full w-0 overflow-visible">
+            <DotLottieVue
+              loop
+              autoplay
+              class="absolute -top-12 -left-12 w-46 md:ml-2"
+              src="/chanawat-portfolio/lotties/earth.json"
+            />
+          </div>
+        </div>
         <h2 class="!text-4xl max-md:!text-3xl">
           {{ locale == "th" ? "ชนาวัฒน์ ทั้วสุภาพ" : "Chanawat Thuasuphap" }}
         </h2>
