@@ -26,7 +26,7 @@ onMounted(() => {
           freezeOnOffscreen: false,
         }"
         class="await-loading mb-16 h-96 w-96"
-        src="/chanawat-portfolio/lotties/earth-loading.lottie"
+        src="/chanawat-portfolio/lotties/earth-loading.json"
       />
     </div>
     <slot />
