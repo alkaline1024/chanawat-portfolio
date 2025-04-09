@@ -4,7 +4,9 @@ const { t, locale } = useI18n();
 
 <template>
   <div class="space-y-2">
-    <h1 class="font-medium">{{ t("education") }}</h1>
+    <h1 class="font-medium">
+      {{ t("education") }}
+    </h1>
     <div class="mt-8 flex items-center gap-8">
       <img
         src="/img/PSU-Emblem.png"

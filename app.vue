@@ -1,11 +1,9 @@
 <template>
-  <ClientOnly>
-    <UApp>
-      <SplashScreen>
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
-      </SplashScreen>
-    </UApp>
-  </ClientOnly>
+  <UApp>
+    <SplashScreen>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </SplashScreen>
+  </UApp>
 </template>

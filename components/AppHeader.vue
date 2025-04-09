@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useMediaQuery } from "@vueuse/core";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const isOpenDrawer = ref(false);
 const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -15,6 +15,30 @@ const tabs = computed(() => [
   { id: "header-tab-blogs",name: t("blogs"), target: "blogs", icon: "ic:outline-message", activeIcon: "ic:message" },
   { id: "header-tab-contact",name: t("contact"), target: "contact", icon: "ic:outline-local-phone", activeIcon: "ic:local-phone" },
 ]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-y-10");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.125,
+    },
+  );
+
+  for (const tab of tabs.value) {
+    const target = document.getElementById(tab.target);
+    if (target) {
+      target.classList.add("opacity-0", "translate-y-10", "duration-800");
+      observer.observe(target);
+    }
+  }
+});
 
 const scrolling = ref(false);
 const activeTab = ref("home");
@@ -37,6 +61,7 @@ function updateHighlightTab() {
         continue;
       }
       highlightTabStyle.value = {
+        animation: "bounceIn 0.5s ease-in-out",
         left: `${tabElement.offsetLeft}px`,
         width: `${tabElement.offsetWidth}px`,
       };
@@ -58,6 +83,7 @@ function scrollToTarget(id: string) {
     if (tabElement) {
       scrolling.value = true;
       highlightTabStyle.value = {
+        animation: "bounceIn 0.5s ease-in-out",
         left: `${tabElement.offsetLeft}px`,
         width: `${tabElement.offsetWidth}px`,
       };
@@ -65,7 +91,13 @@ function scrollToTarget(id: string) {
   }
 }
 
+watch(locale, () => {
+  highlightTabStyle.value = { hidden: true };
+  setTimeout(updateHighlightTab, 100);
+});
+
 const isInit = ref(false);
+
 onMounted(() => {
   window.addEventListener("resize", updateHighlightTab);
   window.addEventListener("scroll", updateHighlightTab);
@@ -73,7 +105,7 @@ onMounted(() => {
   setTimeout(() => {
     updateHighlightTab();
     isInit.value = true;
-  }, 250);
+  }, 2000);
 });
 </script>
 
@@ -86,7 +118,7 @@ onMounted(() => {
       class="flex justify-end"
     >
       <div
-        class="light:bg-green-400 absolute top-3 z-0 rounded-full p-5 transition-all dark:bg-green-600"
+        class="light:bg-green-400 absolute top-3 -right-12 z-0 rounded-full p-5 transition-all dark:bg-green-600"
         :class="{
           'opacity-100': isInit,
           'opacity-0': !isInit,

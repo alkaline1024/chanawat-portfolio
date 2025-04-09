@@ -1,11 +1,20 @@
 <script setup lang="ts">
+const route = useRoute();
+const router = useRouter();
+const localePath = useLocalePath();
 const { locale, setLocale } = useI18n();
+
+async function switchLanguage() {
+  const newLocale = locale.value == "en" ? "th" : "en";
+
+  await setLocale(newLocale);
+}
 </script>
 
 <template>
   <button
     class="flex h-full w-full cursor-pointer gap-4"
-    @click="setLocale(locale == 'en' ? 'th' : 'en')"
+    @click="switchLanguage"
   >
     <div class="aspect-square h-full overflow-hidden rounded-full max-md:h-[24px]">
       <img

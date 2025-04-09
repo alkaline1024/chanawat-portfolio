@@ -1,3 +1,52 @@
+.animate-wave {
+  @apply transition-all;
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s ease-in-out;
+}
+.animate-wave-infinite {
+  @apply transition-all;
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s ease-in-out infinite !important;
+}
+
+.animate-bounce-in {
+  @apply transition-all;
+  animation: bounce-in 0.5s ease-in-out;
+}
+
+.animate-fade-in {
+  @apply transition-all;
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -20,16 +69,4 @@
   60% {
     transform: rotate(0deg);
   }
-}
-.animate-wave {
-  @apply transition-all;
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: wave 2s ease-in-out;
-}
-.animate-wave-infinite {
-  @apply transition-all;
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: wave 2s ease-in-out infinite !important;
 }
