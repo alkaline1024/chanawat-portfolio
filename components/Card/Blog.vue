@@ -13,7 +13,7 @@ const formatted = new Intl.DateTimeFormat(locale.value || "en-US", {
     :key="blog.url"
     :href="blog.url"
     target="_blank"
-    class="group shadow-primary bg-primary relative flex h-64 w-full cursor-pointer flex-col space-y-4 overflow-hidden rounded-xl p-6 shadow-lg"
+    class="group shadow-primary bg-primary relative flex h-64 w-full cursor-pointer flex-col space-y-4 overflow-hidden rounded-xl p-4 shadow-lg"
   >
     <div
       class="bg-primary-300 dark:bg-primary-700 absolute top-0 right-0 z-0 flex aspect-square w-10 items-center justify-center rounded-bl-full duration-500 group-hover:w-[700px]"
