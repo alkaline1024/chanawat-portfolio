@@ -39,7 +39,7 @@ const toggleShow = () => {
           </div>
         </div>
       </div>
-      <div class="bg-primary w-full space-y-3 p-6">
+      <div class="bg-primary w-full space-y-3 p-4">
         <h3 class="text-center font-medium">
           {{ position }}
           <p class="text-xl font-normal">{{ subtitle }}</p>
