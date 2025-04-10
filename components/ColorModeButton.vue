@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n();
 const colorMode = useColorMode();
 const isDark = computed({
   get() {
@@ -28,7 +29,7 @@ const isDark = computed({
       />
     </div>
     <div class="md:hidden">
-      {{ isDark ? "เปลี่ยนเป็นโหมดสว่าง" : "เปลี่ยนเป็นโหมดมืด" }}
+      {{ isDark ? t('switch-to-light-mode') : t('switch-to-dark-mode') }}
     </div>
   </button>
 </template>
