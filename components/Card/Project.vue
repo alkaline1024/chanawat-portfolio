@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const props = defineProps<{
   project: IProject;
 }>();
@@ -8,7 +8,9 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
 </script>
 
 <template>
-  <div class="bg-primary shadow-primary relative overflow-hidden rounded-xl shadow-lg transition-all hover:shadow-xl">
+  <div
+    class="bg-primary shadow-primary relative flex h-full w-full flex-col overflow-hidden rounded-xl shadow-lg transition-all hover:shadow-xl"
+  >
     <img
       :src="`/chanawat-portfolio/img/logo-${project.for}.png`"
       class="absolute top-4 right-4 z-10 w-14 rounded-full shadow-lg"
@@ -21,16 +23,20 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
         />
       </div>
     </div>
-    <div class="space-y-4 p-4">
+    <div class="flex h-full flex-col gap-4 p-4">
       <div>
-        <h3 class="font-medium">{{ project.name }}</h3>
-        <p class="opacity-70">{{ project.type }}</p>
+        <h3 class="font-medium">{{ locale == "th" ? project.name_th : project.name }}</h3>
+        <p class="opacity-70">{{ locale == "th" ? project.type_th : project.type }}</p>
       </div>
-      <div>
-        <div class="font-medium">{{ project.role }}</div>
-        {{ project.description }}
+      <div class="space-y-1">
+        <p class="font-medium">
+          {{ project.role }}
+        </p>
+        <p>
+          {{ locale == "th" ? project.description_th : project.description }}
+        </p>
       </div>
-      <div class="flex flex-wrap gap-2">
+      <div class="mt-auto flex flex-wrap gap-2">
         <UTooltip
           text="Web Framework"
           v-if="isFullStackFramework"
