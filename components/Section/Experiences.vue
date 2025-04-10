@@ -22,7 +22,7 @@ const { t, locale } = useI18n();
       />
 
       <CardExperience
-        imgSrc="/img/logo-devforward.png"
+        imgSrc="/chanawat-portfolio/img/logo-devforward.png"
         backgroundColor="bg-gradient-to-b from-orange-600 to-[#F29620] dark:from-orange-700 dark:to-yellow-600 text-white"
         location="Huai Khwang, Bangkok"
         position="Full Stack Developer"
@@ -38,7 +38,7 @@ const { t, locale } = useI18n();
       />
 
       <CardExperience
-        imgSrc="/img/logo-importstar.png"
+        imgSrc="/chanawat-portfolio/img/logo-importstar.png"
         backgroundColor="bg-gradient-to-b from-purple-900 to-purple-600 text-white"
         location="Hat Yai, Songkhla"
         position="Full Stack Developer"
