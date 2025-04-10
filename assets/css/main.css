@@ -8,9 +8,8 @@
 
 
 body {
-  @apply bg-white dark:bg-stone-900 w-screen max-w-screen overflow-x-hidden;
+  @apply bg-white dark:bg-stone-900 w-screen max-w-screen overflow-x-hidden text-base md:text-lg;
   font-family: "Noto Sans Thai", sans-serif;
-  font-size: 18px;
 }
 
 h1 {

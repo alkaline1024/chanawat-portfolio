@@ -47,7 +47,7 @@ const toggleShow = () => {
         <p class="text-center opacity-70">{{ period }}</p>
         <div
           class="space-y-4 overflow-hidden indent-4 text-pretty transition-all duration-400"
-          :class="showMore ? 'max-h-[300vh]' : 'max-h-28'"
+          :class="showMore ? 'max-h-[300vh]' : 'max-h-24 md:max-h-28'"
         >
           <p
             v-for="(paragraph, index) in description"

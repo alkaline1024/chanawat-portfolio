@@ -50,9 +50,9 @@ onMounted(async () => {
         {{ t("hello-everyone") }}
         <div class="animate-wave-infinite drop-shadow-primary-xl">👋</div>
       </button>
-      <div class="space-y-2 py-2">
+      <div class="space-y-2 md:py-2">
         <div class="flex items-center">
-          <h1 class="!text-7xl font-bold max-md:!text-6xl">
+          <h1 class="!text-7xl font-bold max-md:!text-5xl">
             {{ locale == "th" ? "เอิร์ท" : "I'm Earth!" }}
           </h1>
           <div class="relative h-full w-0 overflow-visible">
@@ -64,11 +64,11 @@ onMounted(async () => {
             />
           </div>
         </div>
-        <h2 class="!text-4xl max-md:!text-3xl">
+        <h2 class="!text-4xl max-md:!text-2xl">
           {{ locale == "th" ? "ชนาวัฒน์ ทั้วสุภาพ" : "Chanawat Thuasuphap" }}
         </h2>
       </div>
-      <h3 class="leading-9">
+      <h3 class="leading-9 max-md:!text-lg">
         {{ t("introduction-description") }}
       </h3>
       <div class="flex items-center gap-8 max-md:gap-3">
