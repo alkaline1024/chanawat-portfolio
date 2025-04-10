@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useMediaQuery } from "@vueuse/core";
+import { SPLASH_SCREEN_TIMEOUT } from "~/constants";
 
 const { t, locale } = useI18n();
 const isOpenDrawer = ref(false);
@@ -105,7 +106,7 @@ onMounted(() => {
   setTimeout(() => {
     updateHighlightTab();
     isInit.value = true;
-  }, 2000);
+  }, SPLASH_SCREEN_TIMEOUT + 400);
 });
 </script>
 

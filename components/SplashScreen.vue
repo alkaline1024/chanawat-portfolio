@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SPLASH_SCREEN_TIMEOUT } from "~/constants";
 import { type DotLottie, DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
 const playerRef = ref();
@@ -7,7 +8,7 @@ onMounted(() => {
   const instance: DotLottie = playerRef.value.getDotLottieInstance();
   instance.addEventListener("load", () => {
     instance.play();
-    setTimeout(() => (isLoading.value = false), 2000);
+    setTimeout(() => (isLoading.value = false), SPLASH_SCREEN_TIMEOUT);
   });
 });
 </script>

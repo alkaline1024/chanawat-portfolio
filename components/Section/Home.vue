@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { SPLASH_SCREEN_TIMEOUT } from "~/constants";
 import { type DotLottie, DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
 const { t, locale } = useI18n();
@@ -21,6 +22,7 @@ function scrollToContact() {
 }
 
 onMounted(async () => {
+  await wait(SPLASH_SCREEN_TIMEOUT);
   // Hello's animation
   bounced.value = true;
   await wait(1500);
