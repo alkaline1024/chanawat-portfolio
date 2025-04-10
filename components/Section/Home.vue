@@ -68,7 +68,7 @@ onMounted(async () => {
           {{ locale == "th" ? "ชนาวัฒน์ ทั้วสุภาพ" : "Chanawat Thuasuphap" }}
         </h2>
       </div>
-      <h3>
+      <h3 class="leading-9">
         {{ t("introduction-description") }}
       </h3>
       <div class="flex items-center gap-8 max-md:gap-3">

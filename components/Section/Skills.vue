@@ -295,9 +295,7 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
       />
       <div class="space-y-4">
         <h2 class="py-2 !text-6xl font-semibold">{{ t("skills") }}</h2>
-        <p class="text-xl opacity-70">
-          {{ t("full-stack-description") }}
-        </p>
+        <p class="text-xl opacity-70">"{{ t("full-stack-description") }}"</p>
       </div>
     </div>
     <div class="overflow-hidden rounded-xl shadow-lg">
