@@ -22,11 +22,12 @@ const { t, locale } = useI18n();
           <div v-if="locale == 'th'">
             <p>
               หลักสูตรวิศวกรรมศาสตรบัณฑิต <br class="md:hidden" />
-              สาขาวิชาวิศวกรรมคอมพิวเตอร์
+              สาขาวิชาวิศวกรรมคอมพิวเตอร์ <br class="md:hidden" />
+              (เกียรตินิยมอันดับสอง)
             </p>
           </div>
           <div v-else>
-            <p>Bachelor of Engineer in Computer Engineer</p>
+            <p>Bachelor of Engineering (Computer Engineering) Second Class Honors</p>
           </div>
         </div>
         <div class="opacity-70">{{ locale == "th" ? "มิถุนายน 2564 - มีนาคม 2568" : "June 2021 - March 2025" }}</div>
