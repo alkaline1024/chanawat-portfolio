@@ -94,6 +94,13 @@ const mySkill = {
   ],
   intermediate: [
     {
+      icon: "logos:react",
+      shortName: "React",
+      fullName: "React",
+      description: "JavaScript library for building user interfaces",
+      url: "https://reactjs.org/",
+    },
+    {
       icon: "logos:c-plusplus",
       shortName: "C++",
       fullName: "C++",
@@ -150,13 +157,6 @@ const mySkill = {
       fullName: "Golang",
       description: "Open-source programming language designed for building efficient software",
       url: "https://golang.org/",
-    },
-    {
-      icon: "logos:react",
-      shortName: "React",
-      fullName: "React",
-      description: "JavaScript library for building user interfaces",
-      url: "https://reactjs.org/",
     },
     {
       icon: "logos:django-icon",
