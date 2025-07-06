@@ -2,6 +2,47 @@
 const { t, locale } = useI18n();
 const projects: IProject[] = [
   {
+    name: "Search Pokémon",
+    name_th: "โปเกเดกซ์",
+    description: "Demo Pokédex web app for searching Pokémon to experimenting with GraphQL queries.",
+    description_th: "เว็บเดโม Pokédex สำหรับค้นหาโปเกมอน และฝึกการใช้งาน Query ข้อมูลด้วย GraphQL",
+    type: "Web Application (Demo)",
+    type_th: "เว็บแอปพลิเคชัน (เดโม)",
+    icon: "mdi:pokeball",
+    role: "Full Stack Developer",
+    for: "experiment",
+    tech: {
+      frontend: "Next.js",
+      backend: "GraphQL",
+      database: "Public API",
+      additionals: ["Apollo Client"],
+    },
+    codeUrl: "github.com/alkaline1024/search-pokemon",
+    demoUrl: "search-pokemon-six-snowy.vercel.app",
+  },
+  {
+    name: "Nextflix",
+    name_th: "Nextflix",
+    description:
+      "A Netflix clone for practicing Clean Architecture. Features My List, Responsive UI and browsing various categories of movies and TV series from the TMDB API.",
+    description_th:
+      "โปรเจ็คจำลองเว็บ Netflix ฝึกการโค้ดแบบ Clean Architecture มีฟีเจอร์เพิ่ม/ลบรายการโปรด การแสดงผลแต่ละอุปกรณ์ การเรียกดูหนังและซีรีส์ประเภทต่าง ๆ โดยดึงข้อมูลผ่าน API จาก TMDB",
+    type: "Web Application (Demo)",
+    type_th: "เว็บแอปพลิเคชัน (เดโม)",
+    icon: "mdi:netflix",
+    role: "Full Stack Developer",
+    for: "experiment",
+    tech: {
+      frontend: "Next.js",
+      backend: "Nest.js",
+      database: "TMDB API",
+      additionals: ["Clean Architecture"],
+    },
+    codeUrl: "github.com/alkaline1024/nextflix",
+    demoUrl: "nextflix-sigma.vercel.app",
+    demoRemark: t("demo-loading-remark"),
+  },
+  {
     name: "Auth & App Portal Management",
     name_th: "ระบบจัดการพอร์ทัลแอปพลิเคชัน",
     description:

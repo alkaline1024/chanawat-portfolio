@@ -7,7 +7,7 @@ interface IProject {
   type: string;
   type_th: string;
   role: string;
-  for: "r202" | "importstar" | "devforward";
+  for: "experiment" | "r202" | "importstar" | "devforward";
   tech: {
     frontend: string;
     backend: string;
@@ -15,4 +15,7 @@ interface IProject {
     additionals?: string[];
   };
   image?: string;
+  codeUrl?: string;
+  demoUrl?: string;
+  demoRemark?: string;
 }

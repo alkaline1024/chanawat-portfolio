@@ -26,5 +26,10 @@
   "bangkok": "กรุงเทพฯ",
   "remote": "ไฮบริด",
   "switch-to-dark-mode": "เปลี่ยนเป็นโหมดมืด",
-  "switch-to-light-mode": "เปลี่ยนเป็นโหมดสว่าง"
+  "switch-to-light-mode": "เปลี่ยนเป็นโหมดสว่าง",
+  "experiment-project": "โปรเจกต์ทดลอง",
+  "visit-demo": "เข้าชมเว็บไซต์",
+  "demo-not-available": "ไม่มีตัวอย่างให้รับชม",
+  "demo-loading-remark": "การเปิดครั้งแรกอาจใช้เวลานาน",
+  "code": "โค้ด"
 }

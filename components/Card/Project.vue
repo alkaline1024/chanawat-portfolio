@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+
 const { t, locale } = useI18n();
 const props = defineProps<{
   project: IProject;
@@ -11,7 +13,20 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
   <div
     class="bg-primary shadow-primary relative flex h-full w-full flex-col overflow-hidden rounded-xl shadow-lg transition-all hover:shadow-xl"
   >
+    <UTooltip
+      v-if="project.for == 'experiment'"
+      :text="t('experiment-project')"
+      :delay-duration="0"
+    >
+      <DotLottieVue
+        loop
+        autoplay
+        class="absolute top-0 -right-12 z-10 w-44 rounded-full"
+        src="/chanawat-portfolio/lotties/earth.json"
+      />
+    </UTooltip>
     <img
+      v-else
       :src="`/chanawat-portfolio/img/logo-${project.for}.png`"
       class="absolute top-4 right-4 z-10 w-14 rounded-full shadow-lg"
     />
@@ -116,6 +131,45 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
             leadingIcon: 'text-lg',
           }"
         />
+      </div>
+      <div class="flex gap-2">
+        <UButton
+          v-if="project.codeUrl"
+          variant="solid"
+          color="neutral"
+          size="xl"
+          :disabled="!project.codeUrl"
+          :href="`https://${project.codeUrl}`"
+          target="_blank"
+          class="flex justify-center !bg-black text-center hover:!bg-black dark:!bg-neutral-700 dark:text-white/90 dark:hover:!bg-neutral-800"
+        >
+          <UIcon
+            v-if="project.codeUrl"
+            name="mdi:code-tags"
+            class="text-lg"
+          />
+          <span v-if="project.codeUrl">{{ t("code") }}</span>
+          <span v-else>{{ t("demo-not-available") }}</span>
+        </UButton>
+        <UButton
+          size="xl"
+          :disabled="!project.demoUrl"
+          :href="`https://${project.demoUrl}`"
+          target="_blank"
+          class="flex grow justify-center text-center"
+          :class="{
+            'pointer-events-none cursor-not-allowed !bg-stone-300 opacity-50 dark:!bg-stone-600 dark:text-white/90':
+              !project.demoUrl,
+          }"
+        >
+          <UIcon
+            v-if="project.demoUrl"
+            name="mdi:external-link"
+            class="text-lg"
+          />
+          <span v-if="project.demoUrl">{{ t("visit-demo") }}</span>
+          <span v-else>{{ t("demo-not-available") }}</span>
+        </UButton>
       </div>
     </div>
   </div>

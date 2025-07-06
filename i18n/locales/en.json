@@ -26,5 +26,10 @@
   "bangkok": "Bangkok",
   "remote": "Remote",
   "switch-to-dark-mode": "Switch to dark mode",
-  "switch-to-light-mode": "Switch to light mode"
+  "switch-to-light-mode": "Switch to light mode",
+  "experiment-project": "Experiment Project",
+  "visit-demo": "Visit Demo",
+  "demo-not-available": "Sorry, Demo Not Available",
+  "demo-loading-remark": "First time may take a while to load",
+  "code": "Code"
 }
