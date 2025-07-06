@@ -167,7 +167,14 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
             name="mdi:external-link"
             class="text-lg"
           />
-          <span v-if="project.demoUrl">{{ t("visit-demo") }}</span>
+          <span v-if="project.demoUrl"
+            >{{ t("visit-demo") }}
+            <span
+              v-if="project.demoRemark"
+              class="text-xs opacity-80"
+              >({{ project.demoRemark }})
+            </span>
+          </span>
           <span v-else>{{ t("demo-not-available") }}</span>
         </UButton>
       </div>
