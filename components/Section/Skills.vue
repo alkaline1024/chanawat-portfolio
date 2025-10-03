@@ -4,6 +4,8 @@ import { useMediaQuery } from "@vueuse/core";
 
 const { t } = useI18n();
 
+// Icon source: https://icones.js.org/
+
 const mySkill = {
   advance: [
     {
@@ -35,6 +37,13 @@ const mySkill = {
       url: "https://www.python.org/",
     },
     {
+      icon: "logos:flask",
+      shortName: "Flask",
+      fullName: "Flask",
+      description: "Lightweight Python web framework",
+      url: "https://flask.palletsprojects.com/",
+    },
+    {
       icon: "logos:mongodb-icon",
       shortName: "MongoDB",
       fullName: "MongoDB",
@@ -49,18 +58,18 @@ const mySkill = {
       url: "https://nuxtjs.org/",
     },
     {
+      icon: "logos:react",
+      shortName: "React",
+      fullName: "React & React Native",
+      description: "JavaScript library for building user interfaces",
+      url: "https://reactjs.org/",
+    },
+    {
       icon: "logos:flutter",
       shortName: "Flutter",
       fullName: "Flutter",
       description: "UI toolkit for building natively compiled applications for mobile, web, and desktop",
       url: "https://flutter.dev/",
-    },
-    {
-      icon: "logos:flask",
-      shortName: "Flask",
-      fullName: "Flask",
-      description: "Lightweight Python web framework",
-      url: "https://flask.palletsprojects.com/",
     },
     {
       icon: "logos:fastapi-icon",
@@ -94,13 +103,6 @@ const mySkill = {
   ],
   intermediate: [
     {
-      icon: "logos:react",
-      shortName: "React",
-      fullName: "React",
-      description: "JavaScript library for building user interfaces",
-      url: "https://reactjs.org/",
-    },
-    {
       icon: "logos:c-plusplus",
       shortName: "C++",
       fullName: "C++",
@@ -115,18 +117,18 @@ const mySkill = {
       url: "https://pandas.pydata.org/",
     },
     {
-      icon: "logos:svelte-icon",
-      shortName: "Svelte",
-      fullName: "Svelte/SvelteKit",
-      description: "Modern framework for building fast and reactive web interfaces",
-      url: "https://svelte.dev/",
-    },
-    {
       icon: "logos:fastify-icon",
       shortName: "Fastify",
       fullName: "Fastify.js",
       description: "Fast and low overhead web framework for Node.js",
       url: "https://www.fastify.io/",
+    },
+    {
+      icon: "logos:svelte-icon",
+      shortName: "Svelte",
+      fullName: "Svelte/SvelteKit",
+      description: "Modern framework for building fast and reactive web interfaces",
+      url: "https://svelte.dev/",
     },
     {
       icon: "logos:redis",
@@ -141,6 +143,13 @@ const mySkill = {
       fullName: "Docker",
       description: "Platform for developing, shipping, and running applications in containers",
       url: "https://www.docker.com/",
+    },
+    {
+      icon: "logos:postgresql",
+      shortName: "PostgreSQL",
+      fullName: "PostgreSQL",
+      description: "Open-source relational database management system",
+      url: "https://www.postgresql.org/",
     },
   ],
   basic: [
