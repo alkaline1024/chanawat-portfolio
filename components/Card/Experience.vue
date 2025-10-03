@@ -24,7 +24,7 @@ const toggleShow = () => {
       :src="imgSrc"
       class="absolute -top-12 right-0 left-0 z-10 mx-auto w-28 rounded-full shadow-lg"
     />
-    <div class="shadow-primary relative w-full overflow-hidden rounded-xl shadow-lg hover:shadow-xl">
+    <div class="shadow-primary relative w-full overflow-hidden rounded-xl shadow-lg transition-all hover:shadow-xl">
       <div
         class="relative flex h-42 w-full flex-col items-center justify-center"
         :class="backgroundColor"

@@ -20,31 +20,6 @@ const experiences = [
     description_th: ["ปัจจุบันกำลังทำงานที่นี่", ".", "."],
   },
   {
-    id: "r202",
-    imgSrc: "/chanawat-portfolio/img/logo-r202.png",
-    backgroundColor: "bg-gradient-to-t from-gray-300 to-gray-50 border-gray-100 border text-stone-950",
-    title: "R202 Laboratory",
-    location: "CoE, Prince of Songkla University",
-    position: "Full Stack Developer",
-    subtitle: "Research Student",
-    period: "Nov 2021 - Apr 2025",
-    description: [
-      "R202 Laboratory is the student training place at the Department of Computer Engineering, Faculty of Engineering, Prince of Songkla University, organized by Dr. Thanathip Limna. This laboratory is interested in software systems development, including Web Development, High Performance Computing, AI, IoT, etc.",
-      "I had the opportunity to explore and apply several key technologies and tools. These included managing background tasks using Redis queues, implementing SMTP for transactional email systems, and building CI/CD pipelines with Docker containers to automate the deployment process. Additionally, I learned how to write clean, maintainable code and collaborate within a development team, which strengthened my ability to work effectively in professional software environments.",
-      "Overall, this experience not only enhanced my technical capabilities but also deepened my understanding of how software is built, tested, and deployed in production-like settings.",
-    ],
-    title_th: "R202 Laboratory",
-    location_th: "ภาควิชาวิศวกรรมคอมพิวเตอร์, มหาวิทยาลัยสงขลานครินทร์",
-    position_th: "Full Stack Developer",
-    subtitle_th: "นักศึกษาวิจัย",
-    period_th: "พ.ย. 2564 - เม.ย. 2568",
-    description_th: [
-      "R202 เป็นพื้นที่สำหรับห้องปฏิบัติการฝึกฝนทักษะสำหรับนักศึกษาภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์ ภายใต้การดูแลของ ดร.ธนาธิป ลิ่มนา โดยเน้นการพัฒนาระบบซอฟต์แวร์ในหลากหลายด้าน เช่น ระบบเว็บไซต์ การประมวลผลสมรรถนะสูง (HPC), ปัญญาประดิษฐ์ (AI) รวมไปถึง IoT",
-      "ผมได้มีโอกาสเรียนรู้และลงมือใช้เทคโนโลยีที่สำคัญหลายอย่าง เช่น การจัดการงานเบื้องหลังด้วย Redis การตั้งค่าระบบส่งอีเมลด้วย SMTP และการสร้างกระบวนการ CI/CD ด้วย Docker รวมถึงฝึกเขียนโค้ดให้สะอาด (Clean code) ดูแลง่าย ให้อยู่ในรูปแบบ Best Practice",
-      "ประสบการณ์นี้ไม่เพียงแต่ช่วยเพิ่มทักษะด้านเทคนิค แต่ยังช่วยให้ผมเข้าใจภาพรวมของการพัฒนา การทดสอบ และนำซอฟต์แวร์ไปใช้งานจริงได้อย่างเข้าใจมากยิ่งขึ้น อีกทั้งยังได้เรียนรู้การทำงานร่วมกับทีม ซึ่งช่วยพัฒนาทักษะการทำงานในสภาพแวดล้อมต่าง ๆ ได้เป็นอย่างมาก",
-    ],
-  },
-  {
     id: "devforward",
     imgSrc: "/chanawat-portfolio/img/logo-devforward.png",
     backgroundColor: "bg-gradient-to-t from-orange-600 to-[#F29620] dark:from-orange-700 dark:to-yellow-600 text-white",
@@ -94,13 +69,38 @@ const experiences = [
       "ด้วยความที่ Import Star เป็นบริษัทที่เพิ่งเริ่มต้นได้ไม่นาน จึงมีบรรยากาศการทำงานที่เปิดกว้างและท้าทายอยู่เสมอ ผมมีโอกาสได้ค้นคว้าและทดลองใช้เครื่องมือหรือไลบรารีใหม่ ๆ เพื่อนำมาใช้เป็นเครื่องมือที่จะพัฒนาอยู่เสมอ ช่วยส่งเสริมแนวและความสามารถในการเรียนรู้สิ่งใหม่ได้อย่างมาก",
     ],
   },
+  {
+    id: "r202",
+    imgSrc: "/chanawat-portfolio/img/logo-r202.png",
+    backgroundColor: "bg-gradient-to-t from-gray-300 to-gray-50 border-gray-100 border text-stone-950",
+    title: "R202 Laboratory",
+    location: "CoE, Prince of Songkla University",
+    position: "Full Stack Developer",
+    subtitle: "Research Student",
+    period: "Nov 2021 - Apr 2025",
+    description: [
+      "R202 Laboratory is the student training place at the Department of Computer Engineering, Faculty of Engineering, Prince of Songkla University, organized by Dr. Thanathip Limna. This laboratory is interested in software systems development, including Web Development, High Performance Computing, AI, IoT, etc.",
+      "I had the opportunity to explore and apply several key technologies and tools. These included managing background tasks using Redis queues, implementing SMTP for transactional email systems, and building CI/CD pipelines with Docker containers to automate the deployment process. Additionally, I learned how to write clean, maintainable code and collaborate within a development team, which strengthened my ability to work effectively in professional software environments.",
+      "Overall, this experience not only enhanced my technical capabilities but also deepened my understanding of how software is built, tested, and deployed in production-like settings.",
+    ],
+    title_th: "R202 Laboratory",
+    location_th: "ภาควิชาวิศวกรรมคอมพิวเตอร์, มหาวิทยาลัยสงขลานครินทร์",
+    position_th: "Full Stack Developer",
+    subtitle_th: "นักศึกษาวิจัย",
+    period_th: "พ.ย. 2564 - เม.ย. 2568",
+    description_th: [
+      "R202 เป็นพื้นที่สำหรับห้องปฏิบัติการฝึกฝนทักษะสำหรับนักศึกษาภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์ ภายใต้การดูแลของ ดร.ธนาธิป ลิ่มนา โดยเน้นการพัฒนาระบบซอฟต์แวร์ในหลากหลายด้าน เช่น ระบบเว็บไซต์ การประมวลผลสมรรถนะสูง (HPC), ปัญญาประดิษฐ์ (AI) รวมไปถึง IoT",
+      "ผมได้มีโอกาสเรียนรู้และลงมือใช้เทคโนโลยีที่สำคัญหลายอย่าง เช่น การจัดการงานเบื้องหลังด้วย Redis การตั้งค่าระบบส่งอีเมลด้วย SMTP และการสร้างกระบวนการ CI/CD ด้วย Docker รวมถึงฝึกเขียนโค้ดให้สะอาด (Clean code) ดูแลง่าย ให้อยู่ในรูปแบบ Best Practice",
+      "ประสบการณ์นี้ไม่เพียงแต่ช่วยเพิ่มทักษะด้านเทคนิค แต่ยังช่วยให้ผมเข้าใจภาพรวมของการพัฒนา การทดสอบ และนำซอฟต์แวร์ไปใช้งานจริงได้อย่างเข้าใจมากยิ่งขึ้น อีกทั้งยังได้เรียนรู้การทำงานร่วมกับทีม ซึ่งช่วยพัฒนาทักษะการทำงานในสภาพแวดล้อมต่าง ๆ ได้เป็นอย่างมาก",
+    ],
+  },
 ];
 </script>
 
 <template>
   <div class="space-y-2">
     <h1 class="font-medium">{{ t("experiences") }}</h1>
-    <div class="mt-20 grid grid-cols-1 gap-8 max-md:gap-20 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-20 grid grid-cols-1 gap-8 gap-y-20 max-md:gap-20 md:grid-cols-2 lg:grid-cols-3">
       <CardExperience
         v-for="exp in experiences"
         :key="exp.id"
