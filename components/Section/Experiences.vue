@@ -3,14 +3,31 @@ const { t, locale } = useI18n();
 
 const experiences = [
   {
+    id: "gramick",
+    imgSrc: "/chanawat-portfolio/img/logo-gramick.png",
+    backgroundColor: "bg-gradient-to-t from-[#3400FF] to-[#00BFFF] text-white",
+    title: "Gramick Co., Ltd.",
+    location: "Ladprao, Bangkok",
+    position: "Full Stack Developer",
+    subtitle: "Full-time",
+    period: "May 2025 - Present",
+    description: ["Currently working here.", ".", "."],
+    title_th: "Gramick Co., Ltd.",
+    location_th: "ลาดพร้าว, กรุงเทพฯ",
+    position_th: "Full Stack Developer",
+    subtitle_th: "พนักงานประจำ",
+    period_th: "พ.ค. 2568 - ปัจจุบัน",
+    description_th: ["ปัจจุบันกำลังทำงานที่นี่", ".", "."],
+  },
+  {
     id: "r202",
     imgSrc: "/chanawat-portfolio/img/logo-r202.png",
-    backgroundColor: "bg-gradient-to-b from-gray-300 to-gray-50 text-stone-950",
+    backgroundColor: "bg-gradient-to-t from-gray-300 to-gray-50 border-gray-100 border text-stone-950",
     title: "R202 Laboratory",
     location: "CoE, Prince of Songkla University",
     position: "Full Stack Developer",
     subtitle: "Research Student",
-    period: "Nov 2021 - Present",
+    period: "Nov 2021 - Apr 2025",
     description: [
       "R202 Laboratory is the student training place at the Department of Computer Engineering, Faculty of Engineering, Prince of Songkla University, organized by Dr. Thanathip Limna. This laboratory is interested in software systems development, including Web Development, High Performance Computing, AI, IoT, etc.",
       "I had the opportunity to explore and apply several key technologies and tools. These included managing background tasks using Redis queues, implementing SMTP for transactional email systems, and building CI/CD pipelines with Docker containers to automate the deployment process. Additionally, I learned how to write clean, maintainable code and collaborate within a development team, which strengthened my ability to work effectively in professional software environments.",
@@ -20,7 +37,7 @@ const experiences = [
     location_th: "ภาควิชาวิศวกรรมคอมพิวเตอร์, มหาวิทยาลัยสงขลานครินทร์",
     position_th: "Full Stack Developer",
     subtitle_th: "นักศึกษาวิจัย",
-    period_th: "พ.ย. 2564 - ปัจจุบัน",
+    period_th: "พ.ย. 2564 - เม.ย. 2568",
     description_th: [
       "R202 เป็นพื้นที่สำหรับห้องปฏิบัติการฝึกฝนทักษะสำหรับนักศึกษาภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์ ภายใต้การดูแลของ ดร.ธนาธิป ลิ่มนา โดยเน้นการพัฒนาระบบซอฟต์แวร์ในหลากหลายด้าน เช่น ระบบเว็บไซต์ การประมวลผลสมรรถนะสูง (HPC), ปัญญาประดิษฐ์ (AI) รวมไปถึง IoT",
       "ผมได้มีโอกาสเรียนรู้และลงมือใช้เทคโนโลยีที่สำคัญหลายอย่าง เช่น การจัดการงานเบื้องหลังด้วย Redis การตั้งค่าระบบส่งอีเมลด้วย SMTP และการสร้างกระบวนการ CI/CD ด้วย Docker รวมถึงฝึกเขียนโค้ดให้สะอาด (Clean code) ดูแลง่าย ให้อยู่ในรูปแบบ Best Practice",
@@ -30,7 +47,7 @@ const experiences = [
   {
     id: "devforward",
     imgSrc: "/chanawat-portfolio/img/logo-devforward.png",
-    backgroundColor: "bg-gradient-to-b from-orange-600 to-[#F29620] dark:from-orange-700 dark:to-yellow-600 text-white",
+    backgroundColor: "bg-gradient-to-t from-orange-600 to-[#F29620] dark:from-orange-700 dark:to-yellow-600 text-white",
     title: "Dev Forward Co., Ltd.",
     location: "Huai Khwang, Bangkok",
     position: "Full Stack Developer",
@@ -55,7 +72,7 @@ const experiences = [
   {
     id: "importstar",
     imgSrc: "/chanawat-portfolio/img/logo-importstar.png",
-    backgroundColor: "bg-gradient-to-b from-purple-900 to-purple-600 text-white",
+    backgroundColor: "bg-gradient-to-t from-purple-900 to-purple-600 text-white",
     title: "Import Star Co., Ltd.",
     location: "Hat Yai, Songkhla",
     position: "Full Stack Developer",
