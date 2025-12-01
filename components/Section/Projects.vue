@@ -98,6 +98,7 @@ const projects: IProject[] = [
       database: "MongoDB",
       additionals: ["Google Fit"],
     },
+    demoUrl: "app.walkwing.co",
   },
   {
     name: "Custom Suit Order Management",
