@@ -2,6 +2,26 @@
 const { t, locale } = useI18n();
 const projects: IProject[] = [
   {
+    name: "Hakon - Migrant Lookup System",
+    name_th: "Hakon - ระบบค้นหารายชื่อผู้อพยพ",
+    description:
+      "Developed a real-time refugee lookup system during the 2025 Hat Yai flood crisis, designed to help shelters quickly search and verify displaced individuals. Supports multi-shelter operations with role-based access control. Developed overnight (~6 hours) with the R202 team and deployed immediately. Handled heavy traffic on day one and now serves over 15,000+ registered individuals.",
+    description_th:
+      "สร้างขึ้นในช่วงเหตุการณ์น้ำท่วมใหญ่ปี 2568 ที่หาดใหญ่ เพื่อช่วยศูนย์พักพิงค้นหาและตรวจสอบรายชื่อผู้อพยพได้อย่างรวดเร็ว รองรับหลายศูนย์พักพิงพร้อมระบบ RBAC แยกบทบาทของแต่ละศูนย์ พัฒนาร่วมกับทีม R202 ภายในคืนเดียว (~6 ชั่วโมง) และเปิดใช้งานได้ทันที รองรับผู้ใช้งานจำนวนมากตั้งแต่วันแรกได้โดยไม่ล่ม และปัจจุบันมีข้อมูลผู้อพยพมากกว่า 15,000+ คนแล้ว (01/12/2025)",
+    type: "Web Application",
+    type_th: "เว็บแอปพลิเคชัน",
+    icon: "mdi:account-search",
+    role: "Full Stack Developer",
+    for: "r202",
+    tech: {
+      frontend: "Jinja, TailwindCSS",
+      backend: "Flask",
+      database: "MongoDB",
+      additionals: ["Real-world Emergency Use", "Volunteer Work"],
+    },
+    demoUrl: "hakon.psu.ac.th",
+  },
+  {
     name: "Search Pokémon",
     name_th: "โปเกเดกซ์",
     description: "Demo Pokédex web app for searching Pokémon to experimenting with GraphQL queries.",
