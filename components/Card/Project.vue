@@ -144,19 +144,50 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
           class="flex justify-center !bg-black text-center hover:!bg-black dark:!bg-neutral-700 dark:text-white/90 dark:hover:!bg-neutral-800"
         >
           <UIcon
-            v-if="project.codeUrl"
             name="mdi:code-tags"
             class="text-lg"
           />
-          <span v-if="project.codeUrl">{{ t("code") }}</span>
-          <span v-else>{{ t("demo-not-available") }}</span>
+          <span>{{ t("code") }}</span>
+        </UButton>
+
+        <!-- App Store & Play Store -->
+        <UButton
+          v-if="project.appleStoreUrl"
+          size="xl"
+          :disabled="!project.appleStoreUrl"
+          :href="`https://${project.appleStoreUrl}`"
+          target="_blank"
+          class="flex grow justify-center !bg-black text-center hover:!bg-black dark:!bg-neutral-700 dark:text-white/90 dark:hover:!bg-neutral-800"
+        >
+          <UIcon
+            name="mdi:apple"
+            class="text-xl"
+          />
+          <span>App Store</span>
         </UButton>
         <UButton
+          v-if="project.playStoreUrl"
+          size="xl"
+          :disabled="!project.playStoreUrl"
+          :href="`https://${project.playStoreUrl}`"
+          target="_blank"
+          class="flex grow justify-center !bg-black text-center hover:!bg-black dark:!bg-neutral-700 dark:text-white/90 dark:hover:!bg-neutral-800"
+        >
+          <UIcon
+            name="logos:google-play-icon"
+            class="text-lg"
+          />
+          <span>Google Play</span>
+        </UButton>
+
+        <!-- Demo Url -->
+        <UButton
+          v-if="!project.playStoreUrl || !project.appleStoreUrl"
           size="xl"
           :disabled="!project.demoUrl"
           :href="`https://${project.demoUrl}`"
           target="_blank"
-          class="flex grow justify-center text-center"
+          class="grow justify-center truncate text-center"
           :class="{
             'pointer-events-none cursor-not-allowed !bg-stone-300 opacity-50 dark:!bg-stone-600 dark:text-white/90':
               !project.demoUrl,
@@ -165,13 +196,16 @@ const isFullStackFramework = project.tech.frontend == project.tech.backend;
           <UIcon
             v-if="project.demoUrl"
             name="mdi:external-link"
-            class="text-lg"
+            class="inline text-lg"
           />
-          <span v-if="project.demoUrl"
-            >{{ t("visit-demo") }}
+          <span
+            v-if="project.demoUrl"
+            class="inline truncate"
+          >
+            {{ t("visit-demo") }}
             <span
               v-if="project.demoRemark"
-              class="text-xs opacity-80"
+              class="text-sm opacity-80"
               >({{ project.demoRemark }})
             </span>
           </span>

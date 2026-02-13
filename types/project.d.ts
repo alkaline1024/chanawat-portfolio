@@ -18,4 +18,6 @@ interface IProject {
   codeUrl?: string;
   demoUrl?: string;
   demoRemark?: string;
+  appleStoreUrl?: string;
+  playStoreUrl?: string;
 }

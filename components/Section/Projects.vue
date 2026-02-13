@@ -2,6 +2,33 @@
 const { t, locale } = useI18n();
 const projects: IProject[] = [
   {
+    name: "WalkWing - Walk Eternity",
+    name_th: "WalkWing - Walk Eternity",
+    description:
+      "Developed a mobile app with Flutter to track users' steps and convert them into points, enabling team challenges and campaign missions through scanning at various locations to redeem rewards at stores or via gachapon-style random draws. Also developed a comprehensive back-office management system with Svelte.",
+    description_th:
+      "พัฒนาแอปมือถือด้วย Flutter เก็บจำนวนก้าวผู้ใช้งานมาสะสมเป็นแต้ม แข่งขันชาเลนจ์เก็บจำนวนก้าวกันเป็นทีม หรือการทำภารกิจแคมเปญด้วยการสแกนตามจุดต่าง ๆ เพื่อแลกรับรางวัลในร้านค้าหรือผ่านการสุ่มจากตู้กาชาปอง และพัฒนาระบบจัดการข้อมูลหลังบ้านแบบเต็มรูปแบบด้วย Svelte",
+    type: "Mobile Application",
+    type_th: "แอปพลิเคชันบนมือถือ",
+    icon: "ic:round-phonelink",
+    role: "Full Stack Developer (Part-time)",
+    for: "importstar",
+    tech: {
+      frontend: "Flutter",
+      backend: "FastAPI",
+      database: "MongoDB",
+      additionals: [
+        "Google Fit",
+        "Apple Health",
+        "Apple Developer Program",
+        "App Store Connect",
+        "Google Play Console",
+      ],
+    },
+    appleStoreUrl: "apps.apple.com/th/app/walkwing-walk-eternity/id6751245505",
+    playStoreUrl: "play.google.com/store/apps/details?id=co.tuber.walkwing",
+  },
+  {
     name: "Hakon - Migrant Lookup System",
     name_th: "Hakon - ระบบค้นหารายชื่อผู้อพยพ",
     description:
@@ -81,8 +108,8 @@ const projects: IProject[] = [
     },
   },
   {
-    name: "WalkWing Application",
-    name_th: "WalkWing",
+    name: "WalkWing (Pre-NIA Prototype)",
+    name_th: "WalkWing (รุ่นต้นแบบส่ง NIA)",
     description:
       "Developed a mobile app with Flutter and a web app with Svelte for event management, including participant and back-office systems. Integrated map-based features and a gachapon-style reward system.",
     description_th:
@@ -96,9 +123,9 @@ const projects: IProject[] = [
       frontend: "Flutter, Svelte",
       backend: "FastAPI",
       database: "MongoDB",
-      additionals: ["Google Fit"],
     },
     demoUrl: "app.walkwing.co",
+    demoRemark: t("demo-recommand-mobile"),
   },
   {
     name: "Custom Suit Order Management",
