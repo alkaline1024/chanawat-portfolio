@@ -11,6 +11,13 @@ const showLess = () => (visibleCount.value = defaultVisibleCount);
 const isExpanded = computed(() => visibleCount.value != defaultVisibleCount);
 const blogs = [
   {
+    title: "อยากให้ MongoEngine ลบ Document ที่เกี่ยวข้องโดยอัตโนมัติ? ใช้ reverse_delete_rule สิ",
+    content:
+      "เวลาใช้ MongoEngine กับ MongoDB หลายคนคงเคยสงสัยว่า \“ถ้าเราลบ Document ไปแล้ว ReferenceField ที่เกี่ยวข้องจะลบออกไปไหม?\” คำตอบคือ — MongoDB ไม่ทำให้ให้เอง แต่ MongoEngine มีของให้เรียบร้อยแล้ว นั่นคือ… reverse_delete_rule นั่นเองง",
+    publishDate: "Mar 6, 2025",
+    url: "https://medium.com/@eartheisen/%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B9%83%E0%B8%AB%E0%B9%89-mongoengine-%E0%B8%A5%E0%B8%9A-document-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B9%82%E0%B8%99%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4-%E0%B9%83%E0%B8%8A%E0%B9%89-reverse-delete-rule-%E0%B8%AA%E0%B8%B4-c2d5d67f42cc",
+  },
+  {
     title: "ฝึกงานที่ Dev Forward: จากนักศึกษา สู่วิถี Full Stack Developer!",
     content:
       "สวัสดีผู้อ่านทุกท่าน ผมนายชนาวัฒน์ ทั้วสุภาพ (เอิร์ท) นักศึกษาจากมหาวิทยาลัยสงขลานครินทร์ คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์ ที่เดินเข้าสู่วิถีแห่งการฝึกงานในฐานะ Full Stack Developer จะขอใช้บทความนี้เพื่อเป็นที่สมุดบันทึกประสบการณ์จากการฝึกงานที่ Dev Forward Co., Ltd.",
