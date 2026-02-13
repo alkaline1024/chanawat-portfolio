@@ -14,6 +14,7 @@ const experiences = [
     description: [
       "Worked as a Full Stack Developer across web and mobile platforms using Nest.js, React, and React Native. Developed and maintained backend services using PostgreSQL through both Prisma and TypeORM.",
       "Created internal tools (Bash scripts, LINE Messaging API) to improve team workflows, and implemented end-to-end automated tests using Playwright.",
+      "Managed iOS distribution via Apple Developer (certificates, provisioning, TestFlight, App Store submission) and Android release via Google Play Console (internal testing, production rollout).",
     ],
     title_th: "Gramick House Co., Ltd.",
     location_th: "ลาดพร้าว, กรุงเทพฯ",
@@ -23,6 +24,7 @@ const experiences = [
     description_th: [
       "ทำงานในตำแหน่ง Full Stack Developer พัฒนาระบบทั้งเว็บไซต์และแอปพลิเคชัน โดยใช้เทคโนโลยี Nest.js, React และ React Native พัฒนาและดูแลระบบ Backend โดยใช้ PostgreSQL ทั้งผ่าน Prisma และ TypeORM",
       "สร้างเครื่องมือเพื่อใช้ภายในองค์กร (Bash Script, Line Messaging API) เพื่อให้การทำงานง่ายขึ้น และเขียนชุดทดสอบแบบ End-to-End ด้วย Playwright",
+      "ดูแลกระบวนการเผยแพร่แอป iOS ผ่าน Apple Developer Program (จัดการ Certificates, Provisioning Profiles, อัปโหลดผ่าน TestFlight และส่งขึ้น App Store) และ Release แอป Android ผ่าน Google Play Console (จัดการ Internal Testing และ Production Rollout)",
     ],
   },
   {
